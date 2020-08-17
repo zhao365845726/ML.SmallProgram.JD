@@ -1,0 +1,195 @@
+/**index.wxss**/
+.container{
+  position: absolute;
+  background-color: #afafaf;
+}
+
+.flexed{
+  width: 100%;
+  height: 0;
+  background-color: red;
+  position: fixed;
+  top:0;
+  z-index: 2;
+}
+
+/* component/ search/ search.wxss */
+/* 顶部搜索框样式-start */
+.comSearch{
+  width: 100%;
+  height: 80rpx;
+  background-color: red;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10rpx 0;
+}
+.left{
+  width: 90%;
+  height: 60rpx;
+  margin-left: 20rpx;
+  background-color: rosybrown;
+  /* display: flex; */
+  position: relative;
+  border-radius: 50rpx;
+  background-color: white;
+}
+.search_icon{
+  position: absolute;
+  height: 40rpx;
+  padding-top: 10rpx;
+  width: 100rpx;
+  top: 0;
+  left: 50rpx;
+}
+
+.search_txt{
+  position: absolute;
+  left: 150rpx;
+  line-height: 60rpx;
+  top: 0;
+}
+.search_cam{
+  padding-top: 10rpx;
+  position: absolute;
+  height: 40rpx;
+  width: 100rpx;
+  right: 50rpx;
+  top: 0;
+}
+
+.right{
+  width: 10%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+
+.activity{
+  height: 40rpx;
+  width: 100%;
+  padding-top: 10rpx;
+  padding-left: 10rpx;
+}
+/* 顶部搜索框样式-end */
+
+ /* 首页搜索框下方tab-start */
+/* component/topTab/topTab.wxss */
+.top_tap{
+  height: 80rpx;
+  width: 100%;
+  position: relative;
+  color: white;
+  background-color: red;
+}
+
+.tabscr_view{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.list_item{
+  height: 80rpx;
+  min-width: max-content;
+  display: inline-block;
+}
+
+.list_txt{
+  height: 100%;
+  min-width: max-content;
+  margin: 0 20rpx;
+  line-height: 80rpx;
+  text-align: center;
+  padding-bottom: 5rpx;
+}
+
+.select{
+  border-bottom: 5rpx blue solid;
+}
+
+.tab_more{
+  position: absolute;
+  height: 60rpx;
+  right: 0;
+  top:0;
+  margin-top: 10rpx;
+  z-index: 9;
+  background-color: red;
+  border-left: 1rpx black solid;
+} 
+
+.more_type{
+  position: absolute;
+  height: 160rpx;
+  width: 100%;
+  background-color:white;
+  top: 80rpx;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  border:3rpx solid #3f0000;
+}
+
+.wit{
+  color: black;
+}
+
+.type_show{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.more_select{
+  border: 3rpx solid black;
+}
+/* 首页搜索框下方tab-end */
+
+
+/* 首页tabbar下方swiper-start */
+.index_sw{
+  height: 500rpx;
+  width: 750rpx;
+  background-color: royalblue;
+}
+
+.index_item{
+  height: 100%;
+  width: 100%;
+  background-color: royalblue;
+  z-index: 999;
+} 
+
+.sw_sl{
+  overflow-y: scroll;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* .tab_view{
+  height: 3000rpx;
+  width: 100%;
+} */
+/* 首页tabbar下方swiper-end */
+
+/* .home_show{
+  position: relative;
+  left: 0;
+  top:160rpx;
+}
+
+.index_sw{
+  height: 3000rpx;
+  width: 750rpx;
+  background-color: royalblue;
+}
+
+.index_item{
+  height: 100%;
+  width: 100%;
+  background-color: royalblue;
+  z-index: 999;
+} */

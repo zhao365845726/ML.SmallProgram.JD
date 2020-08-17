@@ -1,0 +1,17 @@
+<!-- component/ search/ search.wxml -->
+<!-- 首页搜索框 -->
+<view class="comSearch">
+    <view class="left">
+        <image class="search_icon" mode="heightFix" src="/assect/img/in_search.png"/>
+        <!-- 点击该文字，进入搜索页面 -->
+        <text class="search_txt">{{search_data}}</text>
+        <!-- 点击该文字，选择图片上传 -->
+        <image class="search_cam" mode="heightFix" bind:tap="OpenCam"  src="/assect/img/cam_search.png" />
+    </view>
+    <view class="right">
+        <navigator >
+            <!-- 搜索框右侧抢京豆按钮 -->
+           <image class="activity" mode="heightFix"  src="/assect/img/in_liwu.png" />
+        </navigator>
+    </view>
+</view>

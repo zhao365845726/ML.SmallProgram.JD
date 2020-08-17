@@ -1,0 +1,132 @@
+<!-- index.wxml -->
+<view class="container">
+    <!-- new -->
+    <view class="flexed">
+        <!-- 顶部搜索框 -->
+        <view class="comSearch">
+            <view class="left">
+                <image class="search_icon" mode="heightFix" src="/assect/img/in_search.png" />
+                <!-- 点击该文字，进入搜索页面 -->
+                <text class="search_txt">{{search_data}}</text>
+                <!-- 点击该文字，选择图片上传 -->
+                <image class="search_cam" mode="heightFix" bind:tap="OpenCam" src="/assect/img/cam_search.png" />
+            </view>
+            <view class="right">
+                <navigator>
+                    <!-- 搜索框右侧抢京豆按钮 -->
+                    <image class="activity" mode="heightFix" src="/assect/img/in_liwu.png" />
+                </navigator>
+            </view>
+        </view>
+        <!-- 顶部搜索框 end -->
+        <!-- 首页搜索框下方tab -->
+        <view class="top_tap">
+            <scroll-view scroll-x>
+                <!-- 水平分类列表 -->
+                <view class="tabscr_view">
+                    <block wx:for="{{getData}}" wx:for-item="i">
+                        <block wx:if="{{i.select}}">
+                            <view id="tab_click" class="list_item" data-mclick="{{i.id}}">
+                                <text class="list_txt select">{{i.tabTxt}}</text>
+                            </view>
+                        </block>
+                        <block wx:else="{{i.select}}">
+                            <view id="tab_click" class="list_item" data-mclick="{{i.id}}" bind:tap="clickTap">
+                                <text class="list_txt">{{i.tabTxt}}</text>
+                            </view>
+                        </block>
+                    </block>
+                </view>
+            </scroll-view>
+            <view class="right_tabscr">
+                <!-- 填充顶部80rpx -->
+                <!-- 是否显示下拉分类列表 -->
+                <block wx:if="{{tab_select}}">
+                    <image class="tab_more" mode="heightFix" bind:tap="showType" src="/assect/img/in_tab_more_sel.png" />
+                    <view class="more_type">
+                        <view class="type_show">
+                            <block wx:for="{{getData}}" wx:for-item="i">
+                                <block wx:if="{{i.select}}">
+                                    <view id="tab_click" class="list_item wit" data-mclick="{{i.id}}" bind:tap="clickTap">
+                                        <text class="list_txt more_select">{{i.tabTxt}}</text>
+                                    </view>
+                                </block>
+                                <block wx:else="{{i.select}}">
+                                    <view id="tab_click" class="list_item wit" data-mclick="{{i.id}}" bind:tap="clickTap">
+                                        <text class="list_txt">{{i.tabTxt}}</text>
+                                    </view>
+                                </block>
+                            </block>
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <image class="tab_more" mode="heightFix" bind:tap="showType" src="/assect/img/in_tab_more.png" />
+                </block>
+            </view>
+        </view>
+        <!-- 首页搜索框下方tab-end -->
+        <swiper class="index_sw" style="height:{{screen_h}}" circular current="{{data_one}}" bindchange="changeBar">
+            <block wx:for="{{getData.length}}" wx:for-item="i">
+                <swiper-item class="index_item">
+                    <scroll-view class="sw_sl" style="height:{{screen_h}}" scroll-y>
+                        <view wx:if="{{i == 0}}">
+                            <view class="banner">
+                                <PTBanner></PTBanner>
+                            </view>
+                            <view class="friend">
+                                <PTTypeSw></PTTypeSw>
+                            </view>
+                            <view class="spike">
+                                <PTSpike></PTSpike>
+                            </view>
+                            <view class="featured">
+                                <PTjingxuan></PTjingxuan>
+                            </view>
+                            <view>
+                                <PTalsoall></PTalsoall>
+                            </view>
+                        </view>
+                        <view class="tab_view" wx:else>
+                            <PTIndexP2></PTIndexP2>
+                        </view>
+                    </scroll-view>
+                    <!-- {{getData[i].id}}:{{data_one}} -->
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- old!! -->
+    <!-- <view class="flexed">
+        <view class="search">
+            <PTSearch></PTSearch>
+        </view>
+        <view class="category_tab">
+            <PTTopTab></PTTopTab>
+        </view>
+    </view>
+    <view class="home_show">
+        <swiper class="index_sw" circular current="{{data_one}}" >
+            <block wx:for="{{10}}">
+                <swiper-item class="index_item"  catchtouchmove='catchTouchMove'>
+                    <view class="banner">
+                        <PTBanner></PTBanner>
+                    </view>
+                    <view class="friend">
+                        <PTTypeSw></PTTypeSw>
+                    </view>
+                    <view class="spike">
+                        <PTSpike></PTSpike>
+                    </view>
+                    <view class="featured">
+                        <PTjingxuan></PTjingxuan>
+                    </view>
+                    <view>
+                        <PTalsoall></PTalsoall>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view> -->
+    <!-- old-end -->
+</view>

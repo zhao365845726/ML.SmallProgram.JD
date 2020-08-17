@@ -1,0 +1,13 @@
+<!--component/alsolove/alsoall.wxml-->
+<view class="alsoall">
+    <view class="top_bar_box">
+        <block wx:for="{{4}}">
+           <PTItemTabfour style="width:25%"></PTItemTabfour> 
+        </block>
+    </view>
+    <view class="shop_show_box">
+        <block wx:for="{{20}}">
+           <PTShopItem style="width:49%"></PTShopItem> 
+        </block>
+    </view>
+</view>

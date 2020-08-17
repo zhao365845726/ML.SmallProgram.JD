@@ -1,0 +1,16 @@
+<!-- component/base/shopItem/shopItem.wxml -->
+<view class="base_shop_item">
+    <view class="shop_box">
+        <image class="shop_img" mode="widthFix" src="/assect/img/shop1.png"/>
+        <view class="shop_txt">这是一个商品</view>
+        <view class="shop_bottom">
+            <view class="left">￥18</view>
+            <view class="looklike">
+                看相似
+            </view>
+        </view>
+        <view class="bottom_txt">
+            大家都在买的热销商品
+        </view>
+    </view>
+</view>

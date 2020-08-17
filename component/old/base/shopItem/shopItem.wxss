@@ -1,0 +1,41 @@
+/* component/base/shopItem/shopItem.wxss */
+.base_shop_item{
+    width: 100%;
+    height: min-content;
+    border-radius: 20rpx;
+    padding: 20rpx 20rpx;
+    background-color: white;
+}
+
+.shop_box{
+    width: 90%;
+    height: 100%;
+}
+
+.shop_img{
+    width: 100%;
+}
+
+.shop_txt{
+    min-height: min-content;
+}
+.shop_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.looklike{
+    border-radius: 25%;
+    border: black 2rpx solid;
+    font-size: 20rpx;
+    padding: 5rpx;
+}
+
+.bottom_txt{
+    font-size: 25rpx;
+    padding: 10rpx;
+    background-color: #00006f3f;
+    border-radius: 10rpx;
+    color: blue;
+    width: max-content;
+}

@@ -1,0 +1,354 @@
+/* pages/details/details.wxss */
+
+/* 页面公共属性 */
+.wh_100 {
+    width: 100%;
+    height: 100%;
+}
+
+.boxsize_b {
+    box-sizing: border-box;
+}
+
+.fl_r{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}   
+
+.fl_c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padding_a20 {
+    padding: 20rpx;
+}
+
+.padding_tb20 {
+    padding: 20rpx 0;
+}
+
+.padding_lr20 {
+    padding: 0 20rpx;
+}
+
+.padding_lr10 {
+    padding: 0 10rpx;
+}
+
+.padding_tb10 {
+    padding: 10rpx 0;
+}
+
+.margin_a20 {
+    margin: 20rpx;
+}
+
+.margin_tb20 {
+    margin: 20rpx 0;
+}
+
+.margin_tb40 {
+    margin: 40rpx 0;
+}
+
+.margin_tb10 {
+    margin: 10rpx 0;
+}
+
+.margin_lr10 {
+    margin: 0 10rpx;
+}
+
+.margin_lr20 {
+    margin: 0 20rpx;
+}
+
+.font15 {
+    font-size: 15rpx;
+}
+
+.font20 {
+    font-size: 20rpx;
+}
+
+.font25 {
+    font-size: 25rpx;
+}
+
+.font30 {
+    font-size: 30rpx;
+}
+
+.font35 {
+    font-size: 35rpx;
+}
+
+.font_w {
+    font-weight: bold;
+}
+
+.font_d {
+    text-decoration: line-through;
+}
+
+.font_c1,
+.color_h {
+    color: #7e7e7e;
+}
+
+.color_wit {
+    color: white;
+}
+
+.color_red {
+    color: red;
+}
+
+.z_box {
+    background-color: #5124b8;
+    border-radius: 5rpx;
+}
+
+.border_r {
+    background-color: white;
+    border-radius: 30rpx;
+}
+
+.border_red {
+    border: 3rpx solid red;
+    border-radius: 10rpx;
+}
+
+
+.bg_r {
+    background-color: red;
+}
+
+
+.icon{
+    height: 20rpx;
+    width: 20rpx;
+}
+
+.flex_9{
+    flex:9;
+}
+
+.flex_8{
+    flex:8;
+}
+
+.flex_18{
+    flex:18;
+}
+
+.flex_20{
+    flex:20;
+}
+
+.flex_3{
+    flex:3;
+}
+
+.flex_2{
+    flex:2;
+}
+
+.flex_1{
+    flex:1;
+}
+
+/* box独有属性 */
+.details {
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.shop_img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.shop_tag {
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+}
+
+.left_icon {
+    display: flex;
+    align-items: center;
+}
+
+.quick_shop_icon {
+    height: 60rpx;
+    width: 60rpx;
+}
+
+
+.left_tag {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #6937cf;
+    height: 100%;
+}
+
+.left_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right_tag {
+    flex: 2;
+    background-color: #e5bdfe;
+    display: flex;
+    height: 100%;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.flex_end {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6937cf;
+}
+
+.top_txt {
+    width: max-content;
+}
+
+.favorites_shop {
+    width: 40rpx;
+}
+
+.shop_more {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 0 0 30rpx 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.shop_title{
+    justify-content: space-between;
+}
+
+.top{
+    display: flex;
+}
+
+.more_img{
+    flex: 1;
+}
+
+.show_more_img {
+    height: 40rpx;
+    width: 40rpx;
+}
+
+.shop_discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100rpx;
+}
+
+.shop_to_form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.server_1{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.server_2{
+    width: 100%;
+    border-top:3rpx solid #f2f2f2;
+    justify-content: space-between;
+}
+
+.server_3{
+    width: 100%;
+    justify-content: space-between;
+    background-color: #fafafa;
+    border-radius: 0 0 30rpx 30rpx;
+}
+
+.form_add{
+    width: 100%;
+    justify-content: space-between;
+}
+.server_more{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.all_server{
+    flex-wrap: wrap;
+    flex: 9;
+}
+
+.shop_evaluation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.top_title{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left_pingjia_number{
+ align-self: flex-end;
+}
+
+.left_title{
+    height: 100%;
+}
+
+.left_1{
+    width: 7rpx;
+    height: 40rpx;
+    background: linear-gradient(to bottom, red, white);
+}
+
+.eva_tag{
+    justify-content: space-around;
+}
+
+.evaluation_tag{
+    border-radius: 20rpx;
+    background-color: #fff0f0;
+    padding: 10rpx;
+}
+
+.cust_reviews_left{
+    white-space: nowrap;
+    width: 100%;
+}
+
+.eva_img{
+    width: 200rpx;
+    height: 200rpx;
+    display: inline-block;
+}
+
+.shop_details {
+    display: flex;
+    align-items: center;
+}

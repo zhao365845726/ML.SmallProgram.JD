@@ -1,0 +1,23 @@
+/* component/base/hotSearchItem/hotSearchLeftItem.wxss */
+.hotSearchleft{
+    flex-direction: row;
+    align-items: center;
+}
+
+.hot_search{
+    width: 100%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    background-color: violet;
+}
+
+.select{
+    height: 60rpx;
+    line-height: 60rpx;
+    border-left: 10rpx solid red;
+    padding-left: 20rpx;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 20rpx 0;
+}

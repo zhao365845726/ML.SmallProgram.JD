@@ -1,0 +1,13 @@
+<!-- component/type_sw/typeSw.wxml -->
+<view class="typeSw">
+    <swiper indicator-dots circular bindchange="">
+        <swiper-item class="" wx:for="{{AllListData}}" wx:for-item="i">
+            <view class="pg_sw" wx:for="{{i.pglist}}" wx:for-item="ilist">
+                <view class="pg_sw_item">
+                    <image class="item_img" mode="widthFix" src="{{ilist.imgSrcUrl}}" />
+                    <text class="item_text">{{ilist.text}}</text>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,47 @@
+/* pages/recommend/recommend.wxss */
+.recommend{
+    background-color: #4f4f4f;
+    position: relative;
+}
+
+.top_bar{
+    background-color: white;
+}
+
+.sl{
+    width: 100%;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.bar_item{
+    display: inline-block;
+    width: 15%;
+    padding: 0 20rpx;
+}
+
+.more_bt{
+    position: absolute;
+    right: 0;
+    top:0;
+    height: 100rpx;
+    background-color: red;
+}
+
+.img{
+    height: 100%;
+}
+
+.show_shop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+
+.shop_item{
+    width: 45%;
+    padding: 10rpx;
+}

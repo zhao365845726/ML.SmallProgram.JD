@@ -1,0 +1,60 @@
+<!-- pages/shopping/shopping.wxml -->
+<view class="shopping">
+    <view class="flex_top">
+        <view class="left_loca">获取位置</view>
+        <view class="right_button">编辑</view>
+    </view>
+    <view class="shop_car">
+        <scroll-view class="sl" scroll-x>
+            <block wx:for="{{shopCar}}" wx:for-item="i">
+                <view class="store_box">
+                    <checkbox-group bindchange="checkboxChange">
+                        <view class="store_name">
+                            <checkbox value="{{i.storeId}}" checked="{{i.isSelect}}">{{i.storeName}}</checkbox>
+                        </view>
+                        <block wx:for="{{i.shopList}}" wx:for-item="item">
+                            <view wx:if="{{item.shopNumber>0}}">
+                                <checkbox value="{{i.storeId}},{{item.shop_id}}" checked="{{item.isSelect}}" class="shop_box">
+                                    <view class="shop_box_flex">
+                                        <view class="shop_left">
+                                            <image class="shop_img" mode="widthFix" src="{{item.shopImgUrl}}" />
+                                        </view>
+                                        <view class="shop_right">
+                                            <view class="shop_name">{{item.shopName}}</view>
+                                            <view class="shop_type">{{item.shopType}}</view>
+                                            <view class="shop_number">
+                                                <view class="left_money">{{item.shopPrice}}</view>
+                                                <view class="right_number" catch:tap="">
+                                                    <span class="paddinglr10" data-getitem="{{item}}" catch:tap="less_number">
+                                                        -
+                                                    </span>
+                                                    <input class="number" value="{{item.shopNumber}}" type="number" placeholder="1" maxlength="3"></input>
+                                                    <span class="paddinglr10" data-getitem="{{item}}" catch:tap="add_number">
+                                                        +
+                                                    </span>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </checkbox>
+                            </view>
+                        </block>
+                    </checkbox-group>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <!-- 固定在底部的全选功能 -->
+    <checkbox class="all_select">
+        <view class="bottom_flex">
+            <view class="bottom_left_text">全选</view>
+            <view class="bottom_right">
+                <view class="shop_all_money">
+                    总计:
+                    <span style="font-weight:bold">{{allShopPrice}}</span>
+                </view>
+                <button type="warn" size="mini" disabled>结算</button>
+            </view>
+        </view>
+    </checkbox>
+</view>

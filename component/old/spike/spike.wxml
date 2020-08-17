@@ -1,0 +1,46 @@
+<!-- component/spike/spike.wxml -->
+<view class="spike">
+    <view class="spike_top">
+        <text class="spike_top_title">京东秒杀</text>
+        <view class="spike_top_show">
+            <!-- 几点场 -->
+            <view class="spike_time">10点场</view>
+            <!-- 倒计时 -->
+            <view class="spike_retime">01:43:46</view>
+        </view>
+        <view class="spike_more">
+            <view class="more_hide">更多好货限时疯抢</view>
+            <view class="more_to">></view>
+        </view>
+    </view>
+    <view class="spike_commodity_list">
+        <scroll-view class="spike_sl" scroll-x>
+            <block wx:for="{{10}}">
+                <view class="shop_box">
+                    <!-- 商品图片 -->
+                    <image class="shop_img" mode="widthFix" src="/assect/img/shop1.png" />
+                    <!-- 商品价格 -->
+                    <view class="shop_txt">
+                        <text>￥</text>
+                        <text>699</text>
+                    </view>
+                    <!-- 商品原件 -->
+                    <view class="shop_txt">￥999</view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <view class="spike_bottom">
+        <block wx:for="{{4}}">
+        <view class="shop_box_btom">
+            <view class="shop_txt">品牌闪购</view>
+            <view class="shop_txt">品牌限时特卖</view>
+            <swiper class="te_box" vertical autoplay >
+                <swiper-item >
+                    <image class="swit_img" mode="widthFix" src="/assect/img/shop1.png" />
+                </swiper-item>
+            </swiper>
+        </view>
+        </block>
+    </view>
+</view>

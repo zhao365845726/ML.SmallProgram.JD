@@ -1,0 +1,43 @@
+/* component/topTab/topTab.wxss */
+.top_tap{
+    height: 80rpx;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+.tabscr_view{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.list_item{
+    height: 80rpx;
+    min-width: max-content;
+    display: inline-block;
+}
+
+.list_txt{
+    height: 100%;
+    min-width: max-content;
+    margin: 0 20rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+
+.select{
+    border-bottom: 5rpx blue solid;
+}
+
+.tab_more{
+    position: absolute;
+    height: 60rpx;
+    right: 0;
+    top:0;
+    margin-top: 10rpx;
+    z-index: 9;
+    background-color: red;
+    border-left: 1rpx black solid;
+} 

@@ -1,0 +1,22 @@
+<!-- pages/recommend/recommend.wxml -->
+<view class="recommend">
+    <view class="top_bar">
+        <scroll-view scroll-x class="sl">
+            <block wx:for="{{10}}">
+                <view class="bar_item">
+                    <PTTopBar></PTTopBar>
+                </view>
+            </block>
+        </scroll-view>
+        <view class="more_bt">
+            <image class="img" mode="heightFix" src="/assect/img/in_tab_more.png"></image>
+        </view>
+    </view>
+    <view class="show_shop">
+        <block wx:for="{{20}}">
+            <view class="shop_item">
+                <PTShopItem></PTShopItem>
+            </view>
+        </block>
+    </view>
+</view>

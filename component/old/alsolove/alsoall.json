@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "PTItemTabfour":"/component/old/base/itemTabFour/itemTabFour",
+    "PTShopItem":"/component/old/base/shopItem/shopItem"
+  }
+}

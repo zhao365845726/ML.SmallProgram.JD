@@ -1,0 +1,136 @@
+<!-- pages/details/details.wxml -->
+<view class="details">
+    <view class="shop_img border_r boxsize_b">
+        <image class="shop_img" mode="widthFix" src="/assect/img/shop2.png" />
+    </view>
+    <view class="shop_tag">
+        <view class="left_tag boxsize_b padding_lr20 ">
+            <view class="left_icon">
+                <image class="quick_shop_icon wh_100" mode="widthFix" src="/assect/img/k_shop.png" />
+            </view>
+            <view class="left_txt margin_lr20">
+                <view class="shop_new_money font_w color_wit font_40">9.90</view>
+                <view class="shop_old_money font_d font_c1 font20">￥14.80</view>
+            </view>
+        </view>
+        <view class="right_tag boxsize_b padding_lr20">
+            <view class="flex_end">
+                <view class="top_txt font25">距离结束还剩</view>
+                <view class="bottom_txt">
+                    <span class="z_box color_wit padding_lr20 font25 font_w">09</span>
+                    :
+                    <span class="z_box color_wit padding_lr20 font25 font_w">26</span>
+                    :
+                    <span class="z_box color_wit padding_lr20 font25 font_w">13</span>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="shop_more boxsize_b padding_lr20">
+        <view class="top padding_tb10 boxsize_b">
+            <view class="border_red font20 bg_r color_wit">京东超市</view>
+            <view class="font25 margin_lr20">一站式囤生活好物</view>
+        </view>
+        <view class="shop_title fl_r">
+            <view class="font30 font_w">商品名称商品名称商品名称商品名称</view>
+            <view>
+                <image class="favorites_shop" src="/assect/img/favorites.png" mode="widthFix"></image>
+            </view>
+        </view>
+        <view class="shop_more color_h font20 boxsize_b">
+            好物集结，助力 好物集结，助力 好物集结，助力 好物集结，助力 好物集结，助力
+        </view>
+    </view>
+    <view class="shop_discount border_r">
+        <view class="flex_20 fl_r">
+            <view class="font_w font30 margin_lr20">优惠</view>
+            <view class="border_red padding_lr10 font20 color_red">限购</view>
+            <view class="font_c1 font25 margin_lr10">购买1-5件时享受单价￥9.90,超出……</view>
+        </view>
+        <view class="flex_3 fl_r">
+            <image class="img_1 show_more_img margin_lr20" src="/assect/img/more.png" mode="widthFix"></image>
+        </view>
+    </view>
+    <view class="shop_to_form border_r margin_tb20">
+        <view class="server_1 fl_r boxsize_b padding_a20">
+            <view class="font_w fong30">已选</view>
+            <view class="font30">350ml*13支,1个</view>
+            <view>
+                <image class="show_more_img padding_lr20" src="/assect/img/more.png" mode="widthFix"></image>
+            </view>
+        </view>
+        <view class="server_2 fl_c boxsize_b padding_a20">
+            <view class="form_add fl_r">
+                <view class="font_w fong30">送至</view>
+                <view class="font30">地址：aaaaaaaaaaaaaaaaaaaa</view>
+                <view>
+                    <image class="show_more_img padding_lr20" src="/assect/img/more.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+        <view class="server_3 fl_r boxsize_b padding_a20">
+            <view class="all_server fl_r font20">
+                <span>
+                    <image class="icon margin_lr10" mode="widthFix" src="/assect/img/ok.png" />
+                </span>
+                京东发货&售后
+                <span>
+                    <image class="icon margin_lr10" mode="widthFix" src="/assect/img/warning.png" />
+                </span>
+                不支持7天无理由退货
+                <span>
+                    <image class="icon margin_lr10" mode="widthFix" src="/assect/img/ok.png" />
+                </span>
+                隔日达
+                <span>
+                    <image class="icon margin_lr10" mode="widthFix" src="/assect/img/ok.png" />
+                </span>
+                预约送货
+                <span>
+                    <image class="icon margin_lr10" mode="widthFix" src="/assect/img/ok.png" />
+                </span>
+                部分收货
+                <span>
+                    <image class="icon margin_lr10" mode="widthFix" src="/assect/img/ok.png" />
+                </span>
+                送货上门
+            </view>
+            <view class="more_img">
+                <image class="show_more_img padding_lr20" src="/assect/img/more.png" mode="widthFix"></image>
+            </view>
+        </view>
+        <view></view>
+    </view>
+    <view class="shop_evaluation fl_c border_r">
+        <view class="top_title fl_r boxsize_b padding_a20">
+            <view class="left_title fl_r">
+                <view class="left_1 margin_lr10"></view>
+                <view class="left_pingjia font35 font_w padding_lr10">评价</view>
+                <view class="left_pingjia_number font25 font_w">*万+条</view>
+            </view>
+            <view class="right_title fl_r font_c1 font25 padding_lr10">好评度99% ></view>
+        </view>
+        <view class="eva_tag fl_r boxsize_b padding_lr20">
+            <view class="evaluation_tag flex_1 margin_lr20 font20">方便实用</view>
+            <view class="evaluation_tag flex_1 margin_lr20 font20">美味可口</view>
+            <view class="evaluation_tag flex_1 margin_lr20 font20">新鲜味美</view>
+            <view class="evaluation_tag flex_1 margin_lr20 font20">口感清甜</view>
+        </view>
+        <!-- <view class="cust_reviews_view fl_c boxsize_b padding_lr20">
+            <view class="cust_reviews_txt fl_r boxsize_b font_c1 padding_lr20"></view>
+            <view class="cust_reviews_img fl_r boxsize_b font_c1 padding_a20">
+                评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa
+            </view>
+            <view class="cust_reviews_left boxsize_b font_c1 padding_lr20">
+                <scroll-view class="cust_reviews_left" scroll-x>
+                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                </scroll-view>
+            </view>
+        </view> -->
+    </view>
+    <view class="shop_details"></view>
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "PTHotSearchLeftItem":"/component/old/base/hotSearchItem/hotSearchLeftItem"
+  }
+}

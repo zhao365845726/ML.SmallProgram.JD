@@ -1,0 +1,109 @@
+<!-- pages/me/me.wxml -->
+<view class="me">
+    <view class="me_info">
+        <view class="me_info_more">
+            <view class="left_info_img">
+                <image class="user_img" mode="widthFix" src="/assect/img/user_img.png" />
+            </view>
+            <view class="right_info_list">
+                <view class="user_name">
+                    用户名:123
+                    <span class="ring">铜牌</span>
+                </view>
+                <view class="user_id">用户名:xxxxxxxx</view>
+                <view class="user_interests">
+                    <span class="ring">京享值xxx</span>
+                    <span class="padding_left"></span>
+                    <span class="ring">小白信用xxx</span>
+                    <span class="padding_left"></span>
+                    <span class="ring">家庭号</span>
+                </view>
+            </view>
+            <view class="user_setting">账户设置</view>
+        </view>
+        <view class="me_shop_more">
+            <view class="list">
+                <view class="number">x</view>
+                <view class="list_doc">商品收藏</view>
+            </view>
+            <view class="list">
+                <view class="number">x</view>
+                <view class="list_doc">店铺收藏</view>
+            </view>
+            <view class="list">
+                <view class="number">x</view>
+                <view class="list_doc">我的足迹</view>
+            </view>
+        </view>
+    </view>
+    <view class="me_service">
+        <view class="list">
+            <view class="img_box">
+                <image class="img_with" mode="heightFix" src="/assect/img/icon_1.png"></image>
+            </view>
+            <view class="list_doc">待付款</view>
+        </view>
+        <view class="list">
+            <view class="img_box">
+                <image class="img_with" mode="heightFix" src="/assect/img/icon_2.png"></image>
+            </view>
+            <view class="list_doc">待收货</view>
+        </view>
+        <view class="list">
+            <view class="img_box">
+                <image class="img_with" mode="heightFix" src="/assect/img/icon_3.png"></image>
+            </view>
+            <view class="list_doc">待评价</view>
+        </view>
+        <view class="list">
+            <view class="img_box">
+                <image class="img_with" mode="heightFix" src="/assect/img/icon_4.png"></image>
+            </view>
+            <view class="list_doc">退还/售后</view>
+        </view>
+        <view class="list">
+            <view class="img_box">
+                <image class="img_with" mode="heightFix" src="/assect/img/icon_5.png"></image>
+            </view>
+            <view class="list_doc">全部订单</view>
+        </view>
+    </view>
+    <view class="me_discount bgwhite">
+        <view class="list">
+            <view class="number txt_red">0张</view>
+            <view class="number ">优惠券</view>
+        </view>
+        <view class="list">
+            <view class="number txt_red">0元</view>
+            <view class="number ">余额</view>
+        </view>
+        <view class="list">
+            <view class="number txt_red">0个</view>
+            <view class="number">京豆</view>
+        </view>
+        <view class="list">
+            <view class="number txt_red">0元</view>
+            <view class="number">红包</view>
+        </view>
+        <view class="list">
+            <view class="img_box">
+                <image class="img_with" mode="heightFix" src="/assect/img/user_money.png"></image>
+            </view>
+            <view class="list_doc">我的资产</view>
+        </view>
+    </view>
+    <view class="me_other">
+        <block wx:for="{{data_other}}">
+            <view class="me_blocks">
+                <view class="img_box">
+                    <image class="img_with" mode="heightFix" src="{{item.img_url}}" />
+                </view>
+                <view class="{{item.text}}">我的拼购</view>
+            </view>
+        </block>
+    </view>
+    <view class="customer_server">
+        <view>客户服务</view>
+        <view>></view>
+    </view>
+</view>

@@ -1,0 +1,127 @@
+<!-- pages/category/category.wxml -->
+<view class="category">
+    <view class="left_box">
+        <scroll-view scroll-y style="height: {{screen_h}};">
+            <view>
+                <block wx:for="{{30}}" wx::key="item">
+                    <block wx:if="{{item == 3}}">
+                        <view class="left_block">
+                            <view class="select_left_block"></view>
+                            <view class="text select">选中品类</view>
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <view class="left_block">
+                            <view class="text">其他</view>
+                        </view>
+                    </block>
+                </block>
+                <!-- <block wx:for="{{200}}">
+                    <view>{{item}}</view>
+                </block> -->
+            </view>
+        </scroll-view>
+    </view>
+    <view class="right_box">
+        <scroll-view scroll-y style="height: {{screen_h}};">
+            <view class="right_list_block">
+                <!-- <block wx:for="{{300}}">
+                    <view>{{item}}.{{item}}</view>
+                </block> -->
+                <view class="right_block">
+                    <view class="title">专场推荐</view>
+                    <view class="shop_list">
+                        <view class="shop_box lt">
+                            <view class="shop_left">
+                                <view class="shop_title">京东国际</view>
+                                <view class="shop_activity">每满199减……</view>
+                            </view>
+                            <view class="shop_right">
+                                <image class="shop_img" mode="aspectFit" src="/assect/img/list_1.png" />
+                            </view>
+                        </view>
+                        <view class="shop_box lr">
+                            <view class="shop_left">
+                                <view class="shop_title">京东国际</view>
+                                <view class="shop_activity">每满199减……</view>
+                            </view>
+                            <view class="shop_right">
+                                <image class="shop_img" mode="aspectFit" src="/assect/img/list_1.png" />
+                            </view>
+                        </view>
+                        <view class="shop_box lb">
+                            <view class="shop_left">
+                                <view class="shop_title">京东国际</view>
+                                <view class="shop_activity">每满199减……</view>
+                            </view>
+                            <view class="shop_right">
+                                <image class="shop_img" mode="aspectFit" src="/assect/img/list_1.png" />
+                            </view>
+                        </view>
+                        <view class="shop_box rb">
+                            <view class="shop_left">
+                                <view class="shop_title">京东国际</view>
+                                <view class="shop_activity">每满199减……</view>
+                            </view>
+                            <view class="shop_right">
+                                <image class="shop_img" mode="aspectFit" src="/assect/img/list_1.png" />
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="right_block">
+                    <view class="title">热门搜索</view>
+                    <view class="shop_list">
+                        <block wx:for="{{15}}">
+                            <navigator class="shop_box_type2" open-type="reLaunch" url="/pages/shopList/shopList">
+                                <image class="shop_img_type_2" src="/assect/img/list_2.png" mode="aspectFit"></image>
+                                <view class="bottom_title">显卡</view>
+                            </navigator>
+                        </block>
+                    </view>
+                </view>
+                <view class="right_block">
+                    <view class="title">男士热搜</view>
+                    <view class="shop_list">
+                        <block wx:for="{{12}}">
+                            <view class="shop_box_type2">
+                                <image class="shop_img_type_2" src="/assect/img/list_3.png" mode="aspectFit"></image>
+                                <view class="bottom_title">卫衣</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="right_block">
+                    <view class="title">女士热搜</view>
+                    <view class="shop_list">
+                        <block wx:for="{{12}}">
+                            <view class="shop_box_type2">
+                                <image class="shop_img_type_2" src="/assect/img/list_4.png" mode="aspectFit"></image>
+                                <view class="bottom_title">连衣裙</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="right_block">
+                    <view class="title">生活热搜</view>
+                    <view class="shop_list">
+                        <block wx:for="{{12}}">
+                            <view class="shop_box_type2">
+                                <image class="shop_img_type_2" src="/assect/img/list_5.png" mode="aspectFit"></image>
+                                <view class="bottom_title">床</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="bottom_more">
+                    <view class="left_img">
+                        <image class="more_icon" mode="heightFix" src="/assect/img/to_top.png"></image>
+                    </view>
+                    <view class="right_title">
+                        向上拉继续浏览食品酒水
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

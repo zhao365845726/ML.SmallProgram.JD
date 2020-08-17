@@ -1,0 +1,9 @@
+<!-- component/base/hotSearchItem/hotSearchLeftItem.wxml -->
+<view class="hotSearchleft">
+    <scroll-view scroll-y>
+        <block wx:for="{{20}}">
+            <view wx:if="{{item == 5}}" class="hot_search select">热搜推荐</view>
+            <view wx:else class="hot_search">热搜推荐</view>
+        </block>
+    </scroll-view>
+</view>

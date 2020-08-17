@@ -1,0 +1,73 @@
+<!-- pages/shopList/shopList.wxml -->
+<view class="shopList">
+    <view class="top_list">
+        <block wx:for="{{top_title}}" wx:for-item="i">
+            <view class="list_block_box {{i.select?'select':''}}" bind:tap="show_more">
+                <view class="list_block_txt">{{i.name}}</view>
+                <view class="list_block_img">
+                    <block wx:if="{{true}}">
+                        <image class="down_icon" mode="widthFix" src="/assect/img/down.png" />
+                    </block>
+                    <view wx:else>
+                        <image class="up_icon" mode="widthFix" src="/assect/img/up.png" />
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="all_icon">
+            <image class="all_icon_img" mode="widthFix" src="/assect/img/all_icon.png" />
+        </view>
+        <view class="list_block_2">筛选</view>
+    </view>
+    <view class="show_more_view {{isShow_more?'display_show':'display_none'}}">
+        <block wx:for="{{5}}" wx:for-item="i">
+            <view class="list_show_more {{index==0?'select':''}}">
+                <view class="more_text">综合</view>
+                <view class="isSelect">√</view>
+            </view>
+        </block>
+    </view>
+    <view class="filter_list">
+        <scroll-view scroll-x>
+            <view class="list_block_box_2">
+                <block wx:for="{{filterbt}}" wx:for-item="i">
+                    <view class="filter_button {{index==0?'select font_w':''}}">
+                        {{i.filter_txt}}
+                    </view>
+                </block>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="filter_shop_list">
+        <block wx:for="{{10}}">
+            <navigator open-type="reLaunch" url="/pages/details/details" class="shop_box">
+                <view class="left">
+                    <image class="shop_img" mode="widthFix" src="/assect/img/shop1.png" />
+                </view>
+                <view class="right">
+                    <view class="shop_title font_30">优质商品1 来自精选 超大杯</view>
+                    <view class="shop_tag font_20 margintb_5">整箱</view>
+                    <view class="shop_money font_30 font_red font_w margintb_5">￥9.90</view>
+                    <view class="shop_off_tag margintb_5">
+                        <view class="red_1 font_20 bg_1 marginlr_5 boder_r5 font_cl_w">自营</view>
+                        <view class="red_2 font_20 bg_2 marginlr_5 boder_r5 font_cl_w">京东超市</view>
+                        <view class="red_3 font_20 boder_1 marginlr_5 boder_r5 font_red ">
+                            满109减10
+                        </view>
+                    </view>
+                    <view class="shop_evaluation font_20 margintb_5 font_hi1">8.8万好评</view>
+                    <view class="shop_name font_20 margintb_5 font_hi1">
+                        官方店
+                        <span class="marginlr_5 font_hi1">进店></span>
+                    </view>
+                </view>
+                <view wx:if="{{item == 0}}" class="right_bottom">
+                    <view class="right_bottom_txt shop_tag font_20">广告</view>
+                </view>
+                <view wx:else class="right_bottom">
+                    <image mode="widthFix" src="/assect/img/buy.png" class="right_bottom_img font_20 margintb_5" />
+                </view>
+            </navigator>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,23 @@
+/* component/alsolove/alsoall.wxss */
+.alsoall{
+    /* height: max-content; */
+    width: 100%;
+    background-color: white;
+    border-radius: 25rpx;
+}
+
+.top_bar_box{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.shop_show_box{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}

@@ -1,0 +1,21 @@
+<!-- pages/new/new.wxml -->
+<view class="demo">
+    <view class="left">
+        <scroll-view scroll-y class="height_1000">
+            <!-- <view class="block">
+                <block wx:for="{{1}}">
+                    <view>{{item}}</view>
+                </block>
+            </view> -->
+        </scroll-view>
+    </view>
+    <view class="right">
+        <scroll-view scroll-y class="height_1000">
+            <!-- <view class="block">
+                <block wx:for="{{1}}">
+                    <view>{{item}}.{{item}}</view>
+                </block>
+            </view> -->
+        </scroll-view>
+    </view>
+</view>

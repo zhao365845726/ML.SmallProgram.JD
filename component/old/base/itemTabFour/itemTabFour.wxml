@@ -1,0 +1,13 @@
+<!--component/base/itemTabFour/itemTabFour.wxml-->
+<view class="item_tab_four">
+    <view class="flex">
+        <view class="title select">
+            精选
+        </view>
+        <view wx:if="{{false}}" class="info select">
+            猜你喜欢
+        </view>
+        <view class="is_select">
+        </view>
+    </view>
+</view>

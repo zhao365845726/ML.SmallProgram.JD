@@ -1,0 +1,9 @@
+<!-- pages/component/banner.wxml -->
+<!-- 首页banner -->
+<view class="banner">
+    <swiper class="banner_sw" indicator-dots circular autoplay>
+        <swiper-item wx:for="{{imgs_url}}" class="banner_item">
+            <image class="item_img" mode="scaleToFill" src="{{item.imgurl}}" />
+        </swiper-item>
+    </swiper>
+</view>

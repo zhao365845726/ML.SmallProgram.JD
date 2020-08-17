@@ -1,0 +1,33 @@
+/* component/base/itemTabFour/itemTabFour.wxss */
+.item_tab_four{
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 50rpx;
+}
+
+.info{
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.select{
+    color: red;
+}
+
+.is_select{
+    width: 20%;
+    height: 10rpx;
+    border-radius: 50%;
+    border-bottom: red 10rpx solid;
+}
