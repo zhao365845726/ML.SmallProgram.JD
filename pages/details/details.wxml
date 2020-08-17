@@ -110,27 +110,157 @@
             </view>
             <view class="right_title fl_r font_c1 font25 padding_lr10">好评度99% ></view>
         </view>
-        <view class="eva_tag fl_r boxsize_b padding_lr20">
+        <view class="eva_tag fl_r boxsize_b">
             <view class="evaluation_tag flex_1 margin_lr20 font20">方便实用</view>
             <view class="evaluation_tag flex_1 margin_lr20 font20">美味可口</view>
             <view class="evaluation_tag flex_1 margin_lr20 font20">新鲜味美</view>
             <view class="evaluation_tag flex_1 margin_lr20 font20">口感清甜</view>
         </view>
-        <!-- <view class="cust_reviews_view fl_c boxsize_b padding_lr20">
-            <view class="cust_reviews_txt fl_r boxsize_b font_c1 padding_lr20"></view>
-            <view class="cust_reviews_img fl_r boxsize_b font_c1 padding_a20">
-                评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa
+        <view class="cust_reviews_view fl_c boxsize_b padding_a20">
+            <block wx:for="{{2}}">
+                <view class="cust_review padding_tb20">
+                    <view class="cust_reviews_txt padding_tb20 fl_r boxsize_b font_c1">
+                        <view class="left_view fl_r">
+                            <image class="cust_avatar padding_lr10" mode="widthFix" src="/assect/img/avatar.png" />
+                            <view class="cust_name padding_lr10 font_c1 font20">用户名</view>
+                            <view class="cust_star padding_lr10 fl_r">
+                                <image class="cust_avatar" mode="widthFix" src="/assect/img/star.png" />
+                                <image class="cust_avatar" mode="widthFix" src="/assect/img/star.png" />
+                                <image class="cust_avatar" mode="widthFix" src="/assect/img/star.png" />
+                                <image class="cust_avatar" mode="widthFix" src="/assect/img/star.png" />
+                                <image class="cust_avatar" mode="widthFix" src="/assect/img/star.png" />
+                            </view>
+                        </view>
+                        <view class="right_view">
+                            <view class="font20 font_c1">2020-06-01</view>
+                        </view>
+                    </view>
+                    <view class="cust_reviews_img fl_r boxsize_b font_c1 padding_a20">
+                        评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa评价aaaa
+                    </view>
+                    <view class="cust_reviews_left boxsize_b font_c1 padding_lr20">
+                        <scroll-view class="" scroll-x>
+                            <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                            <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                            <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                            <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                            <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                            <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+                        </scroll-view>
+                    </view>
+                    <view class="bottm_tag font_c1 font25 padding_lr10">350ml*12支</view>
+                </view>
+            </block>
+            <view class="look_more_review border_r padding_a10 margin_tb10">查看全部评价</view>
+            <view class="customer_problem boxsize_b padding_tb20">
+                <view class="top_title fl_r boxsize_b padding_tb20">
+                    <view class="left_title fl_r">
+                        <view class="left_1 margin_lr10"></view>
+                        <view class="left_pingjia font35 font_w padding_lr10">问答</view>
+                    </view>
+                    <view class="right_title fl_r font_c1 font25 padding_lr10">查看全部问答 ></view>
+                </view>
+                <block wx:for="{{3}}">
+                    <view class="customer_problem_show fl_r boxsize_b padding_tb10">
+                        <view class="left_img fl_r">
+                            <image class="left_wen padding_lr10" mode="widthFix" src="/assect/img/wen.png" />
+                            <view class="left_txt font25">现在买是啥时候的水啊？</view>
+                        </view>
+                        <view class="right_txt font20 font_c1">共有*个回答</view>
+                    </view>
+                </block>
             </view>
-            <view class="cust_reviews_left boxsize_b font_c1 padding_lr20">
-                <scroll-view class="cust_reviews_left" scroll-x>
-                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
-                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
-                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
-                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
-                    <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
-                </scroll-view>
-            </view>
-        </view> -->
+        </view>
     </view>
-    <view class="shop_details"></view>
+    <view class="shop_details fl_c border_r margin_tb20 padding_a20">
+        <view class="top_view fl_r">
+            <image class="shop_img_2 padding_lr10" mode="widthFix" src="/assect/img/type1.png" />
+            <view class="fl_c padding_lr10">
+                <view class="font30 font_c1">XXX官方旗舰店</view>
+                <view class="font20 font_c1">400-622-9268</view>
+            </view>
+            <view class="shop_zuan_tag fl_r padding_lr10">
+                <image class="tag_img" mode="widthFix" src="/assect/img/zuan.png" />
+                <view class="shop_tag_txt font20 font_c2">京东好店</view>
+            </view>
+        </view>
+        <view class="shop_tag_show fl_r padding_a20">
+            <view class="tag_1 fl_c flex_1">
+                <view class="padding_tb10 font_w">993万</view>
+                <view class="font20 color_h">粉丝人数</view>
+            </view>
+            <view class="tag_1 fl_c flex_1">
+                <view class="padding_tb10 font_w">4306</view>
+                <view class="font20 color_h">全部商品</view>
+            </view>
+            <view class="tag_1 fl_c flex_1">
+                <view>
+                    <span class="font20 color_h">评价</span>
+                    <span class="font20 color_red">9.06 | 高</span>
+                </view>
+                <view>
+                    <span class="font20 color_h">物流</span>
+                    <span class="font20 color_red">9.06 | 中</span>
+                </view>
+                <view>
+                    <span class="font20 color_h">售后</span>
+                    <span class="font20 color_red">9.06 | 高</span>
+                </view>
+            </view>
+        </view>
+        <view class="fl_r margin_tb20">
+            <view class="look_more_review border_r padding_a10 margin_lr10">收藏店铺</view>
+            <view class="look_more_review border_r padding_a10 margin_lr10">进入店铺</view>
+        </view>
+    </view>
+    <view class="shop_more_1 border_r">
+        <view class="top_tag_1 fl_r padding_tb20">
+            <view>商品介绍</view>
+            <view class="select_tag">规格参数</view>
+            <view>售后保障</view>
+        </view>
+        <view class="shop_info_tab table">
+            <view class="tr">
+                <view class="th">主体</view>
+            </view>
+            <view class="tr">
+                <view class="td">生产许可证</view>
+                <view class="td">其他</view>
+            </view>
+            <view class="tr">
+                <view class="td">净含量</view>
+                <view class="td">保质期</view>
+            </view>
+            <view class="tr">
+                <view class="th">其他</view>
+            </view>
+            <view class="tr">
+                <view class="td">商品编号</view>
+                <view class="td">xxxxxx</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom_fixed fl_r">
+        <view class="flex_1 fl_c">
+            <view class="bottom_1_img">
+                <image class="bottom_img" mode="widthFix" src="/assect/img/bottom_1.png" />
+            </view>
+            <view class="bottom_1_txt font20">客服</view>
+        </view>
+        <view class="flex_1 fl_c">
+            <view class="bottom_1_img">
+                <image class="bottom_img" mode="widthFix" src="/assect/img/bottom_2.png" />
+            </view>
+            <view class="bottom_1_txt font20">店铺</view>
+        </view>
+        <view class="flex_1 fl_c">
+            <view class="bottom_1_img">
+                <image class="bottom_img " mode="widthFix" src="/assect/img/bottom_3.png" />
+            </view>
+            <view class="bottom_1_txt font20">店铺</view>
+        </view>
+        <view class="to_shop_car margin_lr10 border_r flex_2 color_wit font_w">加入购物车</view>
+        <view class="to_money margin_lr10 border_r flex_2 color_wit font_w">立即购买</view>
+    </view>
+    <view class="bottom_fixed fl_r"></view>
 </view>

@@ -1,21 +1,31 @@
 <!-- pages/new/new.wxml -->
-<view class="demo">
+<!-- <view class="demo">
     <view class="left">
         <scroll-view scroll-y class="height_1000">
-            <!-- <view class="block">
+            <view class="block">
                 <block wx:for="{{1}}">
                     <view>{{item}}</view>
                 </block>
-            </view> -->
+            </view>
         </scroll-view>
     </view>
     <view class="right">
         <scroll-view scroll-y class="height_1000">
-            <!-- <view class="block">
+            <view class="block">
                 <block wx:for="{{1}}">
                     <view>{{item}}.{{item}}</view>
                 </block>
-            </view> -->
+            </view>
         </scroll-view>
     </view>
+</view> -->
+<view class="cust_reviews_left boxsize_b font_c1 padding_lr20">
+    <scroll-view class="" scroll-x>
+        <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+        <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+        <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+        <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+        <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+        <image class="eva_img" mode="widthFix" src="/assect/img/shop1.png"></image>
+    </scroll-view>
 </view>
