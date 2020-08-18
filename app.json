@@ -1,8 +1,7 @@
 {
   "pages":[
+    "pages/new/index/index",
     "pages/index/index",
-    "pages/new/new",
-    "pages/new/login/login",
     "pages/category/category",
     "pages/recommend/recommend",
     "pages/shopping/shopping",
@@ -21,7 +20,7 @@
     "borderStyle": "black",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/new/index/index",
         "text": "首页",
         "iconPath": "/assect/img/home.png",
         "selectedIconPath": "/assect/img/home_select.png"

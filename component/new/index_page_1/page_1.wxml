@@ -1,0 +1,86 @@
+<!-- component/new/index_page_1/page_1.wxml -->
+<view class="page_1">
+    <view class="top_banner boxsize_b padding_a10">
+        <swiper class="top_banner_sw">
+            <block wx:for="{{10}}" wx:key="index">
+                <swiper-item class="banner_image">
+                    <image class="banner_img" mode="widthFix" src="/assect/img/banner_img.jpg" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="shop_all_type margin_tb20 boxsize_b padding_a20">
+        <swiper class="shop_type_box">
+            <block wx:for="{{AllServerListData}}" wx:key="index" wx:for-item="i">
+                <swiper-item class="box_one fl_r">
+                    <view class="box_fl fl_r">
+                        <block wx:for="{{i.pglist}}" wx:key="index" wx:for-item="items">
+                            <view class="type_show fl_c padding_a30">
+                                <view class="type_img_box boxsize_b">
+                                    <image class="type_img" mode="widthFix" src="{{items.imgSrcUrl}}" />
+                                </view>
+                                <view class="type_txt font20">{{items.text}}</view>
+                            </view>
+                        </block>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="spike border_r boxsize_b margin_lr20">
+        <view class="spike_title fl_r">
+            <view class="left_box fl_r">
+                <view class="spike_title_txt margin_lr10 font30">京东秒杀</view>
+                <view class="spike_time fl_r">
+                    <view class="left_time padding_lr10 color_wit font20 font_w">8点场次</view>
+                    <view class="right_time padding_lr10 color_red font20">01:13:18</view>
+                </view>
+            </view>
+            <view class="right_box color_h font25">更多好货限时疯抢 ></view>
+        </view>
+        <view class="spike_shop_show">
+            <scroll-view scroll-x class="spike_sv">
+                <block wx:for="{{SpikeCommodityListData}}" wx:key="index">
+                    <view class="show_box fl_c">
+                        <view class="shop_img_box">
+                            <image class="spike_shop_img" mode="widthFix" src="/assect/img/new_img/shop1.png" />
+                        </view>
+                        <view class="com_price color_red font_w font30">
+                            {{item.CommoditySpikePrice}}
+                        </view>
+                        <view class="com_old_price font_d font20">{{item.CommodityOldPrice}}</view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+        <view class="other_view fl_r">
+            <block wx:for="{{4}}">
+                <view class="other_box fl_c margin_a10">
+                    <view class="other_title font25">品牌闪购</view>
+                    <view class="other_title2 font20">品牌限时特卖</view>
+                    <view class="other_img_view">
+                        <image class="other_img" mode="widthFix" src="/assect/img/new_img/shop1.png" />
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="other_view fl_r">
+            <block wx:for="{{2}}" wx:key="index">
+                <view class="flex_1 fl_c">
+                    <view class="top_title fl_r">
+                        <view class="top_title_left font30">东家小院</view>
+                        <view class="top_title_right font20">小院种草></view>
+                    </view>
+                    <view class="fl_r margin_a10">
+                        <view class="other_img_1">
+                            <image class="other_img" mode="widthFix" src="/assect/img/new_img/shop1.png" />
+                        </view>
+                        <view>
+                            <image class="other_img" mode="widthFix" src="/assect/img/new_img/shop1.png" />
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,57 @@
+<!-- pages/new/index/index.wxml -->
+<view class="new_index">
+    <view class="top_fixed fl_c">
+        <view class="top_search boxsize_b padding_lr10 fl_r">
+            <view class="left_search flex_9 fl_r margin_tb10 boxsize_b padding_lr10">
+                <view class="search_img_box flex_1">
+                    <image class="search_img padding_lr10 boxsize_b" src="/assect/img/new_img/search.png" mode="widthFix"></image>
+                </view>
+                <view class="search-txt flex_8">
+                    <view class="font_c1">输入搜索关键字</view>
+                </view>
+                <view class="search-camera fl_r flex_1">
+                    <image class="to_camera" mode="widthFix" src="/assect/img/new_img/camera.png" />
+                </view>
+            </view>
+            <view class="right_bottun flex_1">
+                <image class="gift_img" mode="widthFix" src="/assect/img/new_img/gift.png" />
+            </view>
+        </view>
+        <view class="top_tab fl_r ">
+            <scroll-view scroll-x class="top_sc_v fl_r boxsize_b padding_a10">
+                <view class="left_view">
+                    <block wx:for="{{top_bar_list}}" wx:key="item" wx:for-item="item">
+                        <view class="tab_view" data-top-index="{{item.index}}" bind:tap="onClick">
+                            <view class="tab_item flex_8 padding_lr10 font_w">
+                                {{item.tab_txt}}
+                            </view>
+                            <view wx:if="{{index == topbarSelectIndex}}" class="tab_is_select"></view>
+                        </view>
+                    </block>
+                </view>
+            </scroll-view>
+            <view class="right_view fl_r boxsize_b">
+                <image class="show_more" mode="widthFix" src="{{isShowMore? '/assect/img/new_img/more_show.png':'/assect/img/new_img/more_in.png'}}" bind:tap="show_more_tab" />
+            </view>
+        </view>
+        <view wx:if="{{isShowMore}}" class="top_tab_more">
+            <view class="topbar_more_view margin_tb10 fl_r">
+                <block wx:for="{{top_bar_list}}">
+                    <view class="list_block margin_a10 font25 {{topbarSelectIndex == index?'':'border_tab'}}" data-top-index="{{item.index}}" bind:tap="onClick">
+                        {{item.tab_txt}}
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <swiper class="page_swiper" style="height:{{NoTopBarH}}" current="{{topbarSelectIndex}}" circular>
+        <block wx:for="{{top_bar_list}}" wx:key="index" wx:for-index="i"> 
+            <swiper-item>
+                <scroll-view class="page_sw" style="height:{{NoTopBarH}}" scroll-y>
+                    <view>这是第{{i}}个页面</view>
+                    <PTIndexPageOne></PTIndexPageOne>
+                </scroll-view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
