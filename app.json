@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/new/index/index",
-    "pages/index/index",
     "pages/category/category",
     "pages/recommend/recommend",
     "pages/shopping/shopping",

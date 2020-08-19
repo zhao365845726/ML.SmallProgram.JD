@@ -1,6 +1,6 @@
 # index
-## index.js为早期版本,使用百分比布局，布局使用引用component,界面美观度较差
-# recommend
+## index.js已经重构,可点击首页中推荐进入下一个页面
+# recommend 尚未重构
 ## 同上
 
 # category
