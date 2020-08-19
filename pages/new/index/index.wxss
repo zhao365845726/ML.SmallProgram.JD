@@ -1,5 +1,5 @@
 /* pages/new/index/index.wxss */
-
+/* 页面公共属性 */
 .wh_100 {
   width: 100%;
   height: 100%;
@@ -19,6 +19,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.padding_a30 {
+  padding: 30rpx;
 }
 
 .padding_a20 {
@@ -130,11 +134,9 @@
   border-radius: 10rpx;
 }
 
-
 .bg_r {
   background-color: red;
 }
-
 
 .icon {
   height: 20rpx;
@@ -168,6 +170,7 @@
 .flex_1 {
   flex: 1;
 }
+
 
 /* 这里是私有 */
 .new_index {

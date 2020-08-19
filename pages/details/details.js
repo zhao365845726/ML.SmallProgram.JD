@@ -8,6 +8,14 @@ Page({
 
   },
 
+  toShopCar:function(){
+    wx.switchTab({
+      url:'/pages/shopping/shopping'
+    })
+
+    console.log("进入购物车页面");
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

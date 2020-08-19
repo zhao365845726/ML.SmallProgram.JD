@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "PBRecommend": "/component/new/new_pb_com/pb_recommend"
+  }
 }

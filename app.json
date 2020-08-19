@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/new/index/index",
     "pages/index/index",
     "pages/category/category",
@@ -7,13 +7,14 @@
     "pages/shopping/shopping",
     "pages/me/me",
     "pages/shopList/shopList",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/settlement/settlement"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "position": "bottom",
@@ -36,7 +37,7 @@
         "text": "推荐",
         "iconPath": "/assect/img/recommend.png",
         "selectedIconPath": "/assect/img/recommend_select.png"
-      }, 
+      },
       {
         "pagePath": "pages/shopping/shopping",
         "text": "购物车",

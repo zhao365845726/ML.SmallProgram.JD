@@ -4,17 +4,21 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    // "isNeedMore": {
+    //   type: Boolean,
+    //   value: false
+    // }
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    screen_h: "750rpx"
+    screen_h: "750rpx",
+    // isNeedMore:false
   },
 
-  created:function(){
+  created: function () {
     wx.getSystemInfo({
       success: (res) => {
         let clientHeight = res.windowHeight;

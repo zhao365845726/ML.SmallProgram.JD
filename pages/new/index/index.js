@@ -9,6 +9,7 @@ Page({
     NoTopBarH: "0rpx",
     isShowMore: false,
     topbarSelectIndex: 0,
+    // NeedMore:false,
     top_bar_list: [
       {
         index: 0,
@@ -37,6 +38,10 @@ Page({
     ]
   },
 
+  ChangeBottom: function () {
+    console.log("到底部了")
+    // this.NeedMore
+  },
 
   show_more_tab: function () {
     this.setData({
@@ -53,11 +58,15 @@ Page({
     console.log(onClickIndex);
   },
 
-  // 禁止手动滑动swiper
-  catchTouchMove: function (res) {
-    return false
+  ChangeCurrent: function (e) {
+    var ChangeInde = e.detail.current;
+    if (this.data.topbarSelectIndex != ChangeInde) {
+      this.setData({
+        topbarSelectIndex: ChangeInde
+      })
+      console.log(ChangeInde);
+    }
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

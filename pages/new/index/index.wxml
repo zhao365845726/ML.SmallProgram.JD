@@ -44,13 +44,15 @@
             </view>
         </view>
     </view>
-    <swiper class="page_swiper" style="height:{{NoTopBarH}}" current="{{topbarSelectIndex}}" circular>
-        <block wx:for="{{top_bar_list}}" wx:key="index" wx:for-index="i"> 
+    <swiper class="page_swiper" style="height:{{NoTopBarH}}" current="{{topbarSelectIndex}}" circular duration="0" bindchange="ChangeCurrent">
+        <block wx:for="{{top_bar_list}}" wx:key="index" wx:for-index="i">
             <swiper-item>
-                <scroll-view class="page_sw" style="height:{{NoTopBarH}}" scroll-y>
-                    <view>这是第{{i}}个页面</view>
-                    <PTIndexPageOne></PTIndexPageOne>
+                <scroll-view wx:if="{{i == 0}}" class="page_sw" style="height:{{NoTopBarH}}" scroll-y bindscrolltolower="ChangeBottom">
+                    <PTIndexPageOne isNeedMore="toNextData"></PTIndexPageOne>
                 </scroll-view>
+                <view wx:else>
+                    <view>这是第{{i}}个页面</view>
+                </view>
             </swiper-item>
         </block>
     </swiper>

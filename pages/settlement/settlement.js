@@ -1,4 +1,4 @@
-// pages/new/login/login.js
+// pages/settlement/settlement.js
 Page({
 
   /**

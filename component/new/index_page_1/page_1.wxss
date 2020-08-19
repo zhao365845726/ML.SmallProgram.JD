@@ -1,5 +1,5 @@
 /* component/new/index_page_1/page_1.wxss */
-
+/* 页面公共属性 */
 .wh_100 {
   width: 100%;
   height: 100%;
@@ -336,7 +336,34 @@
   border: 3rpx solid #de6508;
 }
 
-.other_img {
+.other_img_1 {
   height: 150rpx;
   width: 150rpx;
+}
+
+.top_title_2 {
+  height: 40rpx;
+  justify-content: space-between;
+}
+
+.more_left{
+  width: 60rpx;
+  height: 150rpx;
+  justify-content: center;
+}
+
+.more_right{
+  width: 650rpx;
+  overflow: hidden;
+}
+
+.more_sl{
+  width: 600rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.featured_box{
+  width: 120rpx;
+  display: inline-block;
 }

@@ -54,7 +54,7 @@
             </scroll-view>
         </view>
         <view class="other_view fl_r">
-            <block wx:for="{{4}}">
+            <block wx:for="{{4}}" wx:key="index">
                 <view class="other_box fl_c margin_a10">
                     <view class="other_title font25">品牌闪购</view>
                     <view class="other_title2 font20">品牌限时特卖</view>
@@ -73,14 +73,52 @@
                     </view>
                     <view class="fl_r margin_a10">
                         <view class="other_img_1">
-                            <image class="other_img" mode="widthFix" src="/assect/img/new_img/shop1.png" />
+                            <image class="other_img_1" mode="widthFix" src="/assect/img/new_img/shop1.png" />
                         </view>
                         <view>
-                            <image class="other_img" mode="widthFix" src="/assect/img/new_img/shop1.png" />
+                            <image class="other_img_1" mode="widthFix" src="/assect/img/new_img/shop1.png" />
                         </view>
                     </view>
                 </view>
             </block>
         </view>
     </view>
+    <view class="featured_view border_r margin_a20">
+        <view class="featured_top">
+            <view class="featured_title boxsize_b padding_a10">
+                <view class="top_title_2 fl_r">
+                    <view class="featured_left font30">精选馆区</view>
+                    <view class="featured_right font_c1 font25">查看全部 ></view>
+                </view>
+            </view>
+            <view class="featured_title_show fl_r">
+                <block wx:for="{{4}}" wx:key="index">
+                    <view class="flex_1 margin_lr10">
+                        <view class="featured_title font30">京东手机</view>
+                        <view class="featured_title_2 font25 font_c1">稀缺新机购</view>
+                        <view class="featured_img_1">
+                            <image class="other_img_1" mode="widthFix" src="/assect/img/new_img/shop1.png" />
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="more fl_r">
+            <view class="more_left fl_c">
+                <view class="txt_top font25 font_w">为你</view>
+                <view class="botton font25 font_w">推荐</view>
+            </view>
+            <view class="more_right">
+                <scroll-view scroll-x class="more_sl">
+                    <block wx:for="{{10}}" wx:key="index">
+                        <view class="featured_box fl_c margin_lr10">
+                            <image class="other_img_1" mode="widthFix" src="/assect/img/new_img/shop1.png" />
+                            <view class="font20">电脑办公</view>
+                        </view>
+                    </block>
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+    <PBRecommend></PBRecommend>
 </view>

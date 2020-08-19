@@ -259,8 +259,7 @@
             </view>
             <view class="bottom_1_txt font20">店铺</view>
         </view>
-        <view class="to_shop_car margin_lr10 border_r flex_2 color_wit font_w">加入购物车</view>
+        <view class="to_shop_car margin_lr10 border_r flex_2 color_wit font_w" bind:tap="toShopCar">加入购物车</view>
         <view class="to_money margin_lr10 border_r flex_2 color_wit font_w">立即购买</view>
     </view>
-    <view class="bottom_fixed fl_r"></view>
 </view>

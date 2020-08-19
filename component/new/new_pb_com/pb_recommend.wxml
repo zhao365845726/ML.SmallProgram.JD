@@ -1,0 +1,31 @@
+<!-- component/new/new_pb_com/pb_recommend.wxml -->
+<view class="recommend">
+    <view class="top_tab fl_r">
+        <block wx:for="{{5}}">
+            <view class="tab_box fl_c flex_1" data-selectIndex="{{index}}" bind:tap="OnClick">
+                <view class="font30">精选</view>
+                <view class="{{selectIndex == index?'is_select':''}} font20 font_c1">猜你喜欢</view>
+                <view wx:if="{{selectIndex == index}}">
+                    <image class="bottom_circle" mode="widthFix" src="/assect/img/new_img/buttom_circle.png" />
+                </view>
+            </view>
+        </block>
+    </view>
+    <block wx:for="{{show_recommend_number}}">
+        <view wx:if="{{true}}" class="commodity boxsize_b" bind:tap="toNextPage">
+            <view class="commodity_box border_r fl_c margin_a10">
+                <view class="com_image">
+                    <image class="shop_img" mode="widthFix" src="/assect/img/shop1.png" />
+                </view>
+                <view class="com_title padding_a10">
+                    <span class="red_border font_w color_wit padding_lr10 font20">京东超市</span>
+                    <span class="font30 padding_lr10">商品名称1</span>
+                </view>
+                <view class="com_bottom fl_r boxsize_b padding_a20">
+                    <view class="left_Price font25 color_red font_w">￥14.8</view>
+                    <view class="right_txt font20 color_h">看相似</view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
