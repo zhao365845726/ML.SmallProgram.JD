@@ -6,7 +6,7 @@ Page({
    */
   data: {
     allShopPrice: "0.00",
-    lastCheck:"",
+    lastCheck: "",
     shopCar: [
       {
         storeName: "商家1",
@@ -121,7 +121,11 @@ Page({
       //这里的数组操作还存在问题,暂时放弃
     }
   },
-
+  openPage: function () {
+    wx.redirectTo({
+      url:"/pages/settlement/settlement"
+    })
+  },
   add_number: function (event) {
     console.log("减少商品数量");
     var getitem = event.currentTarget.dataset.getitem;

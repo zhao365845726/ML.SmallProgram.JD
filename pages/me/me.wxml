@@ -37,7 +37,7 @@
         </view>
     </view>
     <view class="me_service">
-        <view class="list">
+        <view class="list" bind:tap="toPay">
             <view class="img_box">
                 <image class="img_with" mode="heightFix" src="/assect/img/icon_1.png"></image>
             </view>

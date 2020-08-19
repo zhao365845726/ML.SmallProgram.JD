@@ -1,25 +1,10 @@
-// pages/settlement/settlement.js
+// pages/me/order/me_order.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  paySuccess: function () {
-    wx.showToast({
-      title: '支付成功',
-      icon: 'success',
-      duration: 1000
-    });
-    console.log("支付成功");
-    setTimeout(function () {
-      wx.reLaunch({
-        url: '/pages/me/me'
-      })
-    }, 1000)
 
   },
 

@@ -7,7 +7,8 @@
     "pages/me/me",
     "pages/shopList/shopList",
     "pages/details/details",
-    "pages/settlement/settlement"
+    "pages/settlement/settlement",
+    "pages/me/order/me_order"
   ],
   "window": {
     "backgroundTextStyle": "light",

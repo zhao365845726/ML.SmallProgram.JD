@@ -58,6 +58,12 @@ Page({
     ]
   },
 
+  toPay:function(){
+    wx.redirectTo({
+      url:'/pages/me/order/me_order'
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

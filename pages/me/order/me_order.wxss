@@ -1,4 +1,5 @@
-/* pages/settlement/settlement.wxss */
+/* pages/me/order/me_order.wxss */
+/* 页面公共属性 */
 .wh_100 {
   width: 100%;
   height: 100%;
@@ -170,75 +171,96 @@
   flex: 1;
 }
 
-/* 以下为私有css */
-.settlenment {
+/* 私有css */
+.me_order {
   height: 100%;
   width: 100%;
   background-color: #f7f7f7;
-  position: relative;
 }
 
-.customer_info {
-  height: 160rpx;
-  justify-content: space-evenly;
+.search_view {
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: 3rpx solid #7e7e7e;
+  background-color: white;
 }
 
-.customer_top_view {
-  height: 40rpx;
-  align-self: flex-start;
+.search_icon {
+  width: 30rpx;
 }
 
-.customer_address_view {
-  height: 40rpx;
-  align-self: flex-start;
+.top_bar {
+  width: 100%;
+  border-top: #7e7e7e 3rpx solid;
+  height: 90rpx;
+  background-color: white;
 }
 
-.border_blue {
-  border-right: 20rpx;
-  border: 3rpx solid blue;
+.more_icon {
+  width: 20rpx;
 }
 
-.jd_icon {
+.shop_ico {
   width: 40rpx;
 }
 
+.right_img {
+  border-left: 3rpx #7e7e7e solid;
+  width: 60rpx;
+}
 
-.shop_item {
-  height: 240rpx;
+.delete_icon {
+  width: 30rpx;
+}
+
+
+
+.more_info {
+  border-left: 3rpx #7e7e7e solid;
+  width: 70rpx;
+}
+
+.shop_name {
+  height: 100rpx;
   width: 100%;
-  border-bottom: 3rpx solid #7e7e7e;
+  justify-content: space-between;
 }
 
 .shop_img {
-  width: 140rpx;
+  width: 200rpx;
 }
 
-.shop_info_box {
-  align-items: flex-start;
+.is_select {
+  color: red;
 }
 
-.shop_info_view{
-  width: 100%;
-  justify-content: space-between;
+.pay_info {
+  align-self: flex-end;
 }
 
-.lef_shop_info {
-    align-items: flex-start;
-}
-
-.bottom_view{
-  justify-content: space-between;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100rpx;
-  background-color: white;
+.other_view {
   border-top: #7e7e7e 3rpx solid;
-  z-index: 2;
+  height: 100rpx;
+  width: 100%;
+  justify-content: flex-end;
 }
 
-.button_green{
-  background-color: #06bb03;
-  border-radius: 40rpx;
+.border_rh {
+  border-radius: 50rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+  border: #7e7e7e solid 3rpx;
+}
+
+.border_rr {
+  border-radius: 50rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+  border: red solid 3rpx;
+}
+
+.shop_info,
+.pay_info
+{
+  width: 100%;
 }

@@ -509,6 +509,14 @@
     line-height: 80rpx;
 }
 
+.right_img{
+  width: 60rpx;
+}
+
+.delete_icon{
+  width: 20rpx;
+}
+
 .bottom_img {
     width: 50rpx;
 }

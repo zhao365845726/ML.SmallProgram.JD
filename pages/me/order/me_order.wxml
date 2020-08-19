@@ -1,0 +1,69 @@
+<!-- pages/me/order/me_order.wxml -->
+<view class="me_order">
+    <view class="search_view fl_r boxsize_b margin_a10">
+        <view class="search_icon_box padding_lr10">
+            <image class="search_icon" mode="widthFix" src="/assect/img/new_img/search.png" />
+        </view>
+        <view class="search_txt margin_lr20 font25 color_h">商品名称/商品编号/订单号</view>
+    </view>
+    <view class="order_demo_list">
+        <view class="top_bar padding_lr10 boxsize_b fl_r">
+            <block>
+                <view class="item_box flex_1 color_h fl_c">
+                    <view class="item_txt {{index == 0?'is_select':''}}">全部</view>
+                    <view class="is_select"></view>
+                </view>
+                <view class="item_box flex_1 color_h fl_c">
+                    <view class="item_txt {{index == 0?'is_select':''}}">待付款</view>
+                    <view class="is_select"></view>
+                </view>
+                <view class="item_box flex_1 color_h fl_c">
+                    <view class="item_txt {{index == 0?'is_select':''}}">待收货</view>
+                    <view class="is_select"></view>
+                </view>
+                <view class="item_box flex_1 color_h fl_c">
+                    <view class="item_txt {{index == 0?'is_select':''}}">待评价</view>
+                    <view class="is_select"></view>
+                </view>
+            </block>
+            <view class="more_box">
+                <view class="more_info flex_1 fl_c">
+                    <image src="/assect/img/new_img/more_in.png" mode="widthFix" class="more_icon" />
+                </view>
+            </view>
+        </view>
+        <view class="show_list">
+            <block wx:for="{{10}}">
+                <view class="list_box border_r fl_c padding_a20 margin_a20">
+                    <view class="shop_name fl_r">
+                        <view class="left_1 fl_r padding_lr10">
+                            <image class="shop_ico" mode="widthFix" src="/assect/img/new_img/shop_ico.png" />
+                            <view class="shop_name_txt">
+                                商家名称
+                                <span class="color_h padding_lr10">></span>
+                            </view>
+                        </view>
+                        <view class="left_2 fl_r">
+                            <view class="right_txt padding_lr20 color_h">已取消</view>
+                            <view class="right_img fl_r">
+                                <image class="delete_icon margin_a10" mode="widthFix" src="/assect/img/new_img/delete.png" />
+                            </view>
+                        </view>
+                    </view>
+                    <view class="shop_info boxsize_b padding_lr20 fl_r">
+                        <image class="shop_img" mode="widthFix" src="/assect/img/shop1.png" />
+                        <view class="shop_name">商品名称名称商品商品商品名称名称商品商品</view>
+                    </view>
+                    <view class="pay_info boxsize_b padding_a20">
+                        <span class="color_h font25">共一件商品，实付金额:</span>
+                        ￥*.**
+                    </view>
+                    <view class="other_view boxsize_b padding_a20 fl_r">
+                        <view class="border_rh margin_lr10">看相似</view>
+                        <view class="border_rr margin_lr10 color_red">再次购买</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

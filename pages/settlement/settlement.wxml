@@ -1,52 +1,55 @@
 <!-- pages/settlement/settlement.wxml -->
 <view class="settlenment">
-    <view class="customer_info">
-        <view class="customer_top_view">
+    <view class="customer_info fl_c">
+        <view class="customer_top_view margin_lr20 font30 font_w fl_r">
             <view class="customer_name">用户名</view>
-            <view class="customer_phone_numer">133****1111</view>
+            <view class="margin_lr20 customer_phone_numer">133****1111</view>
         </view>
-        <view class="customer_address_view">
-            <span>公司</span>
+        <view class="customer_address_view margin_lr20 font25 fl_r">
+            <span class="border_blue margin_lr10 padding_lr10">公司</span>
             <span>公司地址：123123123123</span>
         </view>
     </view>
-    <view class="shop_list_view">
-        <view class="top_tile">
-            <image mode="widthFix" src="" />
-            >
+    <view class="shop_list_view border_r padding_a30">
+        <view class="top_tile fl_r">
+            <image class="jd_icon padding_lr20" mode="widthFix" src="/assect/img/new_img/jd_icon.png" />
             <view>京东自营</view>
         </view>
         <view class="shop_view">
             <block wx:for="{{10}}">
-                <view class="fl_r">
-                    <view class="shop_img_box"></view>
-                    <view class="shop_info_box fl_c">
-                        <view class="top_shop_name"></view>
-                        <view class="lef_shop_info">
-                            <view class="shop_info_txt"></view>
-                            <view class="shop_info_price"></view>
-                            <view class="shop_service"></view>
-                            <view class="shop_service"></view>
+                <view class="shop_item fl_r">
+                    <view class="shop_img_box flex_1">
+                        <image class="shop_img" mode="widthFix" src="/assect/img/shop1.png" />
+                    </view>
+                    <view class="shop_info_box fl_c flex_9">
+                        <view class="top_shop_name">商品名称1111111</view>
+                        <view class="shop_info_view fl_r">
+                            <view class="lef_shop_info fl_c flex_9">
+                                <view class="shop_info_txt font25 color_h">800kg/件</view>
+                                <view class="shop_info_price color_red font_w">￥1399.00</view>
+                                <view class="shop_service color_h font20">支持7天无理由退货(拆封后不支持)</view>
+                                <view class="shop_service color_h font20">价格说明</view>
+                            </view>
+                            <view class="shop_number flex_1 color_h">x1</view>
                         </view>
-                        <view class="shop_number">x1</view>
                     </view>
                 </view>
             </block>
         </view>
     </view>
-    <view class="bottom_view fixed">
+    <view class="bottom_view fixed padding_lr20 fl_r">
         <view class="left_view">
             <view class="left_top">
-                <span>实付金额</span>
-                 <span>￥****</span>
+                <span class="font_w padding_a10 font35">实付金额:</span>
+                <span class="color_red padding_a10 font35">￥****</span>
             </view>
             <view class="left_bottom">
-                 <span>已节省</span>
-                 <span>￥****</span>
+                <span class="font20 padding_a10 color_h">已节省:</span>
+                <span class="font20 padding_a10 color_h">￥****</span>
             </view>
         </view>
-        <view class="right_view">
-            <view class="">微信支付</view>
+        <view class="right_view padding_a10">
+            <view class="button_green font_w font30 color_wit boxsize_b padding_a20" bind:tap="paySuccess">微信支付</view>
         </view>
     </view>
 </view>
