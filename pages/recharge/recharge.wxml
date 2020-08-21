@@ -1,0 +1,74 @@
+<!-- pages/recharge/recharge.wxml -->
+<view class="recharge">
+    <view class="top_tab_select bg_w fl_r">
+        <block wx:for="{{topTabContent}}" wx:key="index" wx:for-index="i">
+            <view class="tab_box flex_1 fl_c" data-click-index="{{i}}" bind:tap="changeTopIndex">
+                <image class="recharge_icon" mode="widthFix" src="{{item.tabImg}}" />
+                <view class="rechare_txt font25 {{item.isDisplay?'':'font_c1'}}">
+                    {{item.tabTxt}}
+                </view>
+                <view wx:if="{{i==selectTopTabIndex}}" class="is_select"></view>
+                <view wx:if="{{!item.isDisplay}}" class="is_disable color_h font20 {{item.isDisplay?'':'font_c1'}}">
+                    <span>—</span>
+                    <span>敬请期待</span>
+                    <span>—</span>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="recharge_box bg_w padding_a10 margin_tb20">
+        <view class="phone_number fl_c">
+            <view class="input_view boxsize_b padding_lr20 fl_r">
+                <input class="font35 padding_lr10" value="{{rechargeNumber}}" type="number" placeholder="请输入号码" bindinput="inputNumber" />
+                <view class="color_h padding_lr10 font25" style="{{showNumberInfo?'display:block':'display:none'}}">
+                    {{numberOperator}}
+                </view>
+                <view class="show_clear_box fl_r" style="{{showClear?'display:block':'display:none'}}" bind:tap="clearInputValue">
+                    <image class="clear_icon" mode="widthFix" src="/assect/img/new_img/clear.png" />
+                </view>
+            </view>
+            <view class="error_txt boxsize_b padding_lr20 font25 color_red" style="{{phoneNumberError?'display:block':'display:none'}}">
+                请输入正确的手机号码
+            </view>
+        </view>
+        <view class="select_money_box fl_r">
+            <block wx:for="{{setMeal[selectTopTabIndex]}}" wx:for-item="i">
+                <view class="money_box fl_c {{i.isSelect?'box_is_select':''}}" style="{{canPay?'':'border:3rpx solid #f2c0be;color: #7e7e7e;'}}" data-select-Meal="{{index}}" bind:tap="setSelectMeal">
+                    <view class="old_money font_w font30">{{i.setMeal}}</view>
+                    <view class="new_money font25">{{i.showTips}}</view>
+                </view>
+            </block>
+        </view>
+        <view></view>
+    </view>
+    <view class="discount_box bg_w fl_r color_h boxsize_b padding_a20">
+        <view class="left font30">优惠券</view>
+        <view class="right font20">无可用 ></view>
+    </view>
+    <view class="integral_box bg_w fl_r color_h boxsize_b padding_a20" style="{{canPay?'display:flex':'display:none'}}">
+        <view class="left">京豆</view>
+        <view class="right">
+            <view class="font25">共850个，最多可用850个</view>
+            <view class="fl_r font25 boxsize_b padding_tb10">
+                <view>使用</view>
+                <view class="show_more_box fl_c">
+                    <view class="show_more_box fl_r">
+                        <input class="integral_number" type="number" placeholder="0" model:value="{{integral_number}}" bindinput="useNumber"/>
+                        <picker class="more_img" mode="selector" value="{{index}}" range="{{select_integral_number}}" bind:change="setintegralNumber">
+                            <image class="more_img" mode="widthFix" src="/assect/img/new_img/more_in.png" />
+                        </picker>
+                    </view>
+                    <view wx:if="{{false}}" class="select_show_more fl_c">
+                        <view class="item bg_w">10</view>
+                        <view class="item bg_w">20</view>
+                        <view class="item bg_w">30</view>
+                    </view>
+                </view>
+                <view>个,抵￥{{preferential_Quota}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="button_box font30 color_wit boxsize_b margin_a20 fl_c" style="{{canPay?'':'background-color:#f2c0be;'}}">
+        ￥{{needMoney}} 立即充值
+    </view>
+</view>

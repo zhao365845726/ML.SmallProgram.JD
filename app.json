@@ -5,10 +5,12 @@
     "pages/recommend/recommend",
     "pages/shopping/shopping",
     "pages/me/me",
+    "pages/recharge/recharge",
     "pages/shopList/shopList",
     "pages/details/details",
     "pages/settlement/settlement",
-    "pages/me/order/me_order"
+    "pages/me/order/me_order",
+    "pages/order_details/order_details"
   ],
   "window": {
     "backgroundTextStyle": "light",

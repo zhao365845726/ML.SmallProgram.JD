@@ -10,47 +10,58 @@ Component({
    * 组件的初始数据
    */
   data: {
+    countdownTime: "",
     AllServerListData: [{
       page: 1,
       pglist: [{
         imgSrcUrl: "/assect/img/new_img/type_0.png",
-        text: "京东超市"
+        text: "京东超市",
+        toUrl: "/123123"
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_1.png",
-        text: "京东家电"
+        text: "京东家电",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_2.png",
-        text: "京东服饰"
+        text: "京东服饰",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_3.png",
-        text: "京东手机"
+        text: "京东手机",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_4.png",
-        text: "京喜购物"
+        text: "京喜购物",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_5.png",
-        text: "充值中心"
+        text: "充值中心",
+        toUrl: "/pages/recharge/recharge"
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_6.png",
-        text: "领京豆"
+        text: "领京豆",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_7.png",
-        text: "领优惠券"
+        text: "领优惠券",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_8.png",
-        text: "免费水果"
+        text: "免费水果",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_9.png",
-        text: "京东萌宠"
+        text: "京东萌宠",
+        toUrl: ""
       }
 
       ]
@@ -58,43 +69,53 @@ Component({
       page: 2,
       pglist: [{
         imgSrcUrl: "/assect/img/new_img/type_0.png",
-        text: "京东超市"
+        text: "京东超市",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_1.png",
-        text: "京东家电"
+        text: "京东家电",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_2.png",
-        text: "京东服饰"
+        text: "京东服饰",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_3.png",
-        text: "京东手机"
+        text: "京东手机",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_4.png",
-        text: "京喜购物"
+        text: "京喜购物",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_5.png",
-        text: "充值中心"
+        text: "充值中心",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_6.png",
-        text: "领京豆"
+        text: "领京豆",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_7.png",
-        text: "领优惠券"
+        text: "领优惠券",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_8.png",
-        text: "免费水果"
+        text: "免费水果",
+        toUrl: ""
       },
       {
         imgSrcUrl: "/assect/img/new_img/type_9.png",
-        text: "京东萌宠"
+        text: "京东萌宠",
+        toUrl: ""
       }]
     }],
     SpikeCommodityListData: [{
@@ -165,6 +186,22 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    toPage: function (e) {
+      // console.log(e);
+      var toUrl = e.currentTarget.dataset.toUrl;
+      // console.log(toUrl);
+      // // console.log(toUrl.trim().length != 0);
+      if (toUrl.trim().length != 0) {
+        wx.reLaunch({
+          url: toUrl,
+          success: function () {
+            console.log("启动成功");
+          },
+          fail: function (e) {
+            console.log(e);
+          }
+        })
+      }
+    }
   }
 })

@@ -50,6 +50,9 @@
                 <scroll-view wx:if="{{i == 0}}" class="page_sw" style="height:{{NoTopBarH}}" scroll-y bindscrolltolower="ChangeBottom">
                     <PTIndexPageOne isNeedMore="toNextData"></PTIndexPageOne>
                 </scroll-view>
+                <scroll-view wx:if="{{i == 1}}" class="page_sw" style="height:{{NoTopBarH}}" scroll-y bindscrolltolower="ChangeBottom">
+                    <PTIndexPageTwo isNeedMore="toNextData"></PTIndexPageTwo>
+                </scroll-view>
                 <view wx:else>
                     <view>这是第{{i}}个页面</view>
                 </view>

@@ -1,0 +1,15 @@
+<!-- pages/order_details/order_details.wxml -->
+<view class="order_details">
+    <view>
+        <view>
+            <image class="" src="" mode="widthFix"></image>
+        </view>
+        <view>
+            <view></view>
+            <view></view>
+        </view>
+    </view>
+    <view></view>
+    <view></view>
+    <view></view>
+</view>

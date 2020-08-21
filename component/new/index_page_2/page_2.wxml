@@ -1,0 +1,63 @@
+<!-- component/new/index_p2.wxml -->
+<view class="index_p2">
+    <view class="top_block pb_box">
+        <block wx:for="{{10}}">
+            <view class="shop_box_1" bind:tap="toShopList">
+                <image class="shop_img_1" mode="widthFix" src="/assect/img/shop_1.png" />
+                <view class="shop_txt">投影仪</view>
+            </view>
+        </block>
+    </view>
+    <view class="shop_spike pb_box">
+        <view class="top_title">
+            <view class="left_title">
+                <image class="title_icon" mode="widthFix" src="/assect/img/progress_icon.png" />
+                <view class="title_txt">电脑办公秒杀</view>
+            </view>
+            <view class="title_more color_h">更多></view>
+        </view>
+        <view class="shop_details">
+            <scroll-view scroll-x class="shop_details_sv">
+                <block wx:for="{{6}}">
+                    <view class="shop_box2" bind:tap="toShopPage">
+                        <view class="shop_img_box">
+                            <image class="shop_img_2" mode="heightFix" src="/assect/img/shop1.png" />
+                            <view class="float_text">90天最低</view>
+                        </view>
+                        <view class="shop_price_1">
+                            <view class="shop_discount">￥3569</view>
+                            <view class="shop_old_price">￥3999</view>
+                        </view>
+                        <view class="shop_progress">
+                            <progress class="shop_progress_view" percent="33" stroke-width="10" color="#e0291e"></progress>
+                        </view>
+                        <view class="shop_progress_text">已售33%</view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="view_featured">
+        <view class="featured_box">
+            <view class="line"></view>
+            <view class="featured_icon">
+                <image class="featured_icon_img" mode="heightFix" src="/assect/img/icon_xin.png" />
+            </view>
+            <view class="featured_text">为你精选</view>
+            <view class="line"></view>
+        </view>
+    </view>
+    <view class="featured_shop">
+        <block wx:for="{{10}}">
+            <view class="featured_shop_box pb_box" bind:tap="toShopPage">
+                <view class="shop_img_box_2">
+                    <image class="shop_img_2" mode="widthFix" src="/assect/img/shop2.png" />
+                </view>
+                <view class="bottom_txt">
+                    <view class="shop_title">新款透明人工智能超级电视机 80寸</view>
+                    <view class="shop_price_2">￥9999</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

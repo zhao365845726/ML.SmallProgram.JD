@@ -1,0 +1,310 @@
+/* pages/recharge/recharge.wxss */
+.wh_100 {
+  width: 100%;
+  height: 100%;
+}
+
+.boxsize_b {
+  box-sizing: border-box;
+}
+
+.fl_r {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fl_c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.padding_a30 {
+  padding: 30rpx;
+}
+
+.padding_a20 {
+  padding: 20rpx;
+}
+
+.padding_a10 {
+  padding: 10rpx;
+}
+
+.padding_tb20 {
+  padding: 20rpx 0;
+}
+
+.padding_lr20 {
+  padding: 0 20rpx;
+}
+
+.padding_lr10 {
+  padding: 0 10rpx;
+}
+
+.padding_tb10 {
+  padding: 10rpx 0;
+}
+
+.margin_a20 {
+  margin: 20rpx;
+}
+
+.margin_a10 {
+  margin: 10rpx;
+}
+
+.margin_tb20 {
+  margin: 20rpx 0;
+}
+
+.margin_tb40 {
+  margin: 40rpx 0;
+}
+
+.margin_tb10 {
+  margin: 10rpx 0;
+}
+
+.margin_lr10 {
+  margin: 0 10rpx;
+}
+
+.margin_lr20 {
+  margin: 0 20rpx;
+}
+
+.font15 {
+  font-size: 15rpx;
+}
+
+.font20 {
+  font-size: 20rpx;
+}
+
+.font25 {
+  font-size: 25rpx;
+}
+
+.font30 {
+  font-size: 30rpx;
+}
+
+.font35 {
+  font-size: 35rpx;
+}
+
+.font_w {
+  font-weight: bold;
+}
+
+.font_d {
+  text-decoration: line-through;
+}
+
+.font_c1,
+.color_h {
+  color: #7e7e7e;
+}
+
+.font_c2,
+.color_wit {
+  color: white;
+}
+
+.color_red {
+  color: red;
+}
+
+.z_box {
+  background-color: #5124b8;
+  border-radius: 5rpx;
+}
+
+.border_r {
+  background-color: white;
+  border-radius: 30rpx;
+}
+
+.border_red {
+  border: 3rpx solid red;
+  border-radius: 10rpx;
+}
+
+.bg_r {
+  background-color: red;
+}
+
+.icon {
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.flex_9 {
+  flex: 9;
+}
+
+.flex_8 {
+  flex: 8;
+}
+
+.flex_18 {
+  flex: 18;
+}
+
+.flex_20 {
+  flex: 20;
+}
+
+.flex_7 {
+  flex: 7;
+}
+
+.flex_6 {
+  flex: 6;
+}
+
+.flex_5 {
+  flex: 5;
+}
+
+.flex_4 {
+  flex: 4;
+}
+
+.flex_3 {
+  flex: 3;
+}
+
+.flex_2 {
+  flex: 2;
+}
+
+.flex_1 {
+  flex: 1;
+}
+
+.bg_w{
+  background-color: white;
+}
+
+/* 私有css */
+.recharge {
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.tab_box{
+    width: 100rpx;
+    height: 110rpx;
+}
+
+.recharge_icon{
+  width: 50rpx;
+}
+
+.is_select{
+  margin-top: 10rpx;
+  width: 100rpx;
+  height: 5rpx;
+  border-radius: 2rpx;
+  background-color: #eb3c3c;
+}
+
+.phone_number{
+  height: 120rpx;
+  box-sizing: border-box;
+  border-bottom: #e2e2e2 solid 3rpx;
+  justify-content: space-evenly;
+}
+
+.money_box{
+  width: 220rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  border:3rpx solid #eb3c3c;
+  box-sizing: border-box;
+  margin: 10rpx;
+  justify-content: space-evenly;
+}
+
+.box_is_select{
+  color:white;
+  background-color: #eb3c3c;
+}
+
+.select_money_box{
+  flex-wrap: wrap;
+}
+
+.discount_box{
+  margin-top: 20rpx;
+  justify-content: space-between;
+  height: 75rpx;
+  border-bottom: #e2e2e2 solid 3rpx;
+}
+
+.integral_box{
+  height: 110rpx;
+  justify-content: space-between;
+}
+
+.show_more_box{
+  position: relative;
+  height: 40rpx;
+  border:3rpx solid #eb3c3c;
+  border-radius: 10rpx;
+  width: 130rpx;
+}
+
+.select_show_more{
+  width: 100%;
+  top:40;
+  left: 0;
+  right: 0;
+}
+
+.item{
+  width: 100%;
+}
+
+.integral_number{
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  width: 90rpx;
+}
+
+.more_img{
+  background-color: #eb3c3c;
+  height: 100%;
+  width: 40rpx;
+}
+
+.button_box{
+  height: 90rpx;
+  background-color: #eb3c3c;
+  border-radius: 45rpx;
+  justify-content: center;
+}
+
+.error_txt{
+  align-self: flex-start;
+}
+
+.input_view{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.show_clear_box{
+  height: 100%;
+  width: 60rpx;
+  justify-content: center;
+}
+
+.clear_icon{
+  width: 20rpx;
+}

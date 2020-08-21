@@ -15,7 +15,7 @@
                 <swiper-item class="box_one fl_r">
                     <view class="box_fl fl_r">
                         <block wx:for="{{i.pglist}}" wx:key="index" wx:for-item="items">
-                            <view class="type_show fl_c padding_a30">
+                            <view class="type_show fl_c padding_a30" data-to-url="{{items.toUrl}}" bind:tap="toPage"> 
                                 <view class="type_img_box boxsize_b">
                                     <image class="type_img" mode="widthFix" src="{{items.imgSrcUrl}}" />
                                 </view>
@@ -33,7 +33,7 @@
                 <view class="spike_title_txt margin_lr10 font30">京东秒杀</view>
                 <view class="spike_time fl_r">
                     <view class="left_time padding_lr10 color_wit font20 font_w">8点场次</view>
-                    <view class="right_time padding_lr10 color_red font20">01:13:18</view>
+                    <view class="right_time padding_lr10 color_red font20">1:01:01</view>
                 </view>
             </view>
             <view class="right_box color_h font25">更多好货限时疯抢 ></view>

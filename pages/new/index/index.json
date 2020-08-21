@@ -1,5 +1,7 @@
 {
+  "navigationBarTitleText": "京东商城",
   "usingComponents": {
-    "PTIndexPageOne":"/component/new/index_page_1/page_1"
+    "PTIndexPageOne":"/component/new/index_page_1/page_1",
+    "PTIndexPageTwo":"/component/new/index_page_2/page_2"
   }
 }
