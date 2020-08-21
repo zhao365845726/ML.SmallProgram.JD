@@ -34,7 +34,7 @@
         <view class="select_money_box fl_r">
             <block wx:for="{{setMeal[selectTopTabIndex]}}" wx:for-item="i">
                 <view class="money_box fl_c {{i.isSelect?'box_is_select':''}}" style="{{canPay?'':'border:3rpx solid #f2c0be;color: #7e7e7e;'}}" data-select-Meal="{{index}}" bind:tap="setSelectMeal">
-                    <view class="old_money font_w font30">{{i.setMeal}}</view>
+                    <view class="old_money font_w font30">{{i.setMealTxt}}</view>
                     <view class="new_money font25">{{i.showTips}}</view>
                 </view>
             </block>
@@ -68,7 +68,7 @@
             </view>
         </view>
     </view>
-    <view class="button_box font30 color_wit boxsize_b margin_a20 fl_c" style="{{canPay?'':'background-color:#f2c0be;'}}">
+    <view class="button_box font30 color_wit boxsize_b margin_a20 fl_c" style="{{canPay?'':'background-color:#f2c0be;'}}" bind:tap="toNextPage">
         ￥{{needMoney}} 立即充值
     </view>
 </view>

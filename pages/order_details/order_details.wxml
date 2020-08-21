@@ -1,15 +1,75 @@
 <!-- pages/order_details/order_details.wxml -->
 <view class="order_details">
-    <view>
-        <view>
-            <image class="" src="" mode="widthFix"></image>
+    <view class="top_view fl_r margin_tb20">
+        <view class="fl_r padding_a10">
+            <image class="top_info_img" src="/assect/img/new_img/info.png" mode="widthFix"></image>
         </view>
-        <view>
-            <view></view>
-            <view></view>
+        <view class="top_list fl_c padding_a10 color_wit">
+            <view>已支付</view>
+            <view>您的订单已支付</view>
         </view>
     </view>
-    <view></view>
-    <view></view>
-    <view></view>
-</view>
+    <view class="show_list fl_c margin_tb20 padding_lr20">
+        <view class="list">
+            <span class="color_h">充值号码:</span>
+            <span class="padding_a10">1888888888</span>
+        </view>
+        <view class="list ">
+            <span class="color_h">号码归属:</span>
+            <span class="padding_a10">暂无获得</span>
+        </view>
+        <view class="list ">
+            <span class="color_h">流量面额:</span>
+            <span class="padding_a10">***</span>
+        </view>
+        <view class="list ">
+            <span class="color_h">流量类型：</span>
+        </view>
+        <view class="list ">
+            <span class="color_h">生效日期：</span>
+        </view>
+        <view class="list ">
+            <span class="color_h">有效日期：</span>
+        </view>
+        <view class="list ">
+            <span class="color_h">支持范围:</span>
+        </view>
+    </view>
+    <view class="border_r bg_w">
+        <view class="recharge_view fl_r padding_a20">
+            <view class="font25">JD 京东充值</view>
+            <view class="color_h font20">共计一件商品</view>
+        </view>
+        <view class="shop_view fl_r">
+            <view>
+                <image class="recharge_shop_icon" mode="widthFix" src="/assect/img/new_img/liuliang.png" />
+            </view>
+            <view class="shop_view fl_r">
+                <view class="recharge_list boxsize_b padding_a20 fl_c">
+                    <view class="font25">全国移动流量充值100M国内通用流量包</view>
+                    <view class="color_red font25 font_w">￥10.00</view>
+                </view>
+                <view class="number color_h">X1</view>
+            </view>
+        </view>
+        <view class="kf_box fl_r">
+            <view class="fl_c">
+                <image class="kf_ico" mode="widthFix" src="/assect/img/new_img/kf.png" />
+            </view>
+            <view class="color_h font25 padding_a10">联系客服</view>
+        </view>
+    </view>
+    <view class="show_more_view fl_c margin_tb20">
+        <view class="order_view boxsize_b padding_lr20 fl_r">
+            <view class="fl_r font30">
+                <span class="color_h">订单编号:1333333333333</span>
+                <span class="bor_r" data-to-clipboard="1333333333333" bind:tap="openClipboard">复制</span>
+            </view>
+            <view class="fl_r font30">
+                <span class="font_w">实付金额:</span>
+                <span class="color_red font_w">￥10.00</span>
+            </view>
+        </view>
+        <view class="show_more fl_c font25 color_h">展开详细信息</view>
+    </view>
+</view> 

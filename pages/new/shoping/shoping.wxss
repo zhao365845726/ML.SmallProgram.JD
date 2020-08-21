@@ -1,4 +1,4 @@
-/* pages/order_details/order_details.wxss */
+/* pages/new/shoping/shoping.wxss */
 /* 页面公共属性 */
 .wh_100 {
   width: 100%;
@@ -27,6 +27,10 @@
 
 .padding_a20 {
   padding: 20rpx;
+}
+
+.padding_tb5{
+  padding: 5rpx 0
 }
 
 .padding_a10 {
@@ -138,10 +142,6 @@
   background-color: red;
 }
 
-.bg_w{
-  background-color: white;
-}
-
 .icon {
   height: 20rpx;
   width: 20rpx;
@@ -175,99 +175,97 @@
   flex: 1;
 }
 
-/* 私有样式 */
-page {
-  background: #F3F3F3;
-}
-
-.order_details {
-  background-color: #F7f7f7;
+/* 私有css */
+page{
+    background-color: #F2f2f2f2;
 }
 
 .top_view {
-  height: 130rpx;
-  width: 100%;
-  background-color: red;
-}
-
-.top_info_img {
-  height: 40rpx;
-  width: 40rpx;
-}
-
-.top_list {
-  align-items: flex-start;
-}
-
-.show_list {
-  align-items: flex-start;
-  width: 100%;
+  height: 100rpx;
   background-color: white;
+  border-radius: 0 0 40rpx 40rpx;
+  justify-content: space-between;
 }
 
-.list {
-  padding: 10rpx;
+.position_icon{width: 40rpx;}
+
+.more_icon{width: 40rpx;}
+
+.right_txt{
+    padding: 0 20rpx;
+    border-left: 3rpx solid #3f3f3f;
+}
+
+.shop_list_box{
+    width: 100%;
+}
+
+.box_top{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.info_icon{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.huan_gou{
+    padding-left: 90rpx;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.shop_info_box{
   box-sizing: border-box;
-  font-size: 25rpx;
-}
-
-.recharge_view {
-  justify-content: space-between;
-  background-color: white;
-}
-
-.number {
-  padding-right: 20rpx;
-  align-self: flex-end;
-}
-
-.shop_view{
+  padding-left: 90rpx;
   width: 100%;
-  height: 200rpx;
-  justify-content: space-between;
-  border-top:  #7e7e7e solid 3rpx;
-  border-bottom: #7e7e7e solid 3rpx;
-  background-color: white;
 }
 
-.recharge_list{
-  height: 150rpx;
-  justify-content: space-between;
+.shop_img{
+  width: 200rpx;
+}
+
+.shop_info{
+  width: 100%;
   align-items: flex-start;
 }
 
-.recharge_shop_icon{
-  width: 150rpx;
-}
-
-.kf_ico{
-  width: 40rpx;
-}
-
-.kf_box{
+.bottom{
   width: 100%;
-  justify-content: center;
-  height: 90rpx;
-}
-
-.order_view{
   justify-content: space-between;
-  width: 100%;
 }
 
-.bor_r{
+.number_input{
+  width: 50rpx;
   height: 40rpx;
-  font-size: 20rpx;
-  color:#7e7e7e;
-  border-radius: 20rpx;
-  box-sizing: border-box;
-  padding:5rpx;
-  border:3rpx solid #7e7e7e;
-  margin:0 20rpx;
 }
 
-.show_more_view{
-  background-color: white;
-  height: 150rpx;
-  justify-content: space-evenly;
+.cut_bt,
+add_bt{
+ width: 50rpx;
+ height: 40rpx;
 }
+
+.bottom_view{
+  border-top: 3rpx #3f3f3f solid;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: white;
+  height: 100rpx;
+  justify-content: space-between;
+}
+
+.bottom_bt{
+  height: 80rpx;
+  width: 220rpx;
+  border-radius: 45rpx;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 80rpx;
+}
+

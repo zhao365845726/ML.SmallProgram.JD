@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+
+    phone_number: "",
     //可选择积分数量
     select_integral_number: ['0', '853'],
 
@@ -61,87 +63,87 @@ Page({
     setMeal:
       [
         [{
-          setMeal: "10元",
+          setMealTxt: "10元",
           showTips: "售9.98元",
           price: 9.98,
           isSelect: false
         },
         {
-          setMeal: "20元",
+          setMealTxt: "20元",
           showTips: "售19.96元",
           price: 19.96,
           isSelect: false
         },
         {
-          setMeal: "30元",
+          setMealTxt: "30元",
           showTips: "售29.94元",
           price: 29.94,
           isSelect: false
         }, {
-          setMeal: "50元",
+          setMealTxt: "50元",
           showTips: "售49.90元",
           price: 49.90,
           isSelect: false
         }, {
-          setMeal: "100元",
+          setMealTxt: "100元",
           showTips: "售99.80元",
           price: 99.80,
           isSelect: false
         }, {
-          setMeal: "200元",
+          setMealTxt: "200元",
           showTips: "售199.60元",
           price: 199.60,
           isSelect: false
         }, {
-          setMeal: "300元",
+          setMealTxt: "300元",
           showTips: "售299.40元",
           price: 299.40,
           isSelect: false
         }, {
-          setMeal: "500元",
+          setMealTxt: "500元",
           showTips: "售499.00元",
           price: 499.00,
           isSelect: false
         }],
         [{
-          setMeal: "100M",
+          setMealTxt: "100M",
           showTips: "售10.00元",
           price: 10.00,
           isSelect: false
         },
         {
-          setMeal: "200M",
+          setMealTxt: "200M",
           showTips: "售15.00元",
           price: 15.00,
           isSelect: false
         },
         {
-          setMeal: "300M",
+          setMealTxt: "300M",
           showTips: "售20.00元",
           price: 20.00,
           isSelect: false
         }, {
-          setMeal: "500M",
+          setMealTxt: "500M",
           showTips: "售24.00元",
           price: 24.00,
           isSelect: false
         }, {
-          setMeal: "1G",
+          setMealTxt: "1G",
           showTips: "售30.80元",
           price: 30.80,
           isSelect: false
         }, {
-          setMeal: "2G",
+          setMealTxt: "2G",
           showTips: "售50.00元",
           price: 50.00,
           isSelect: false
         }, {
-          setMeal: "3G",
+          setMealTxt: "3G",
           showTips: "售70.00元",
           price: 70.00,
           isSelect: false
         }, {
-          setMeal: "5G",
+          setMealTxt: "5G",
           showTips: "售100.00元",
           price: 100.00,
           isSelect: false
@@ -171,6 +173,11 @@ Page({
         selectTopTabIndex: NewIndex
       })
       this.clearSelect();
+      let getNeedPrice = this.data.setMeal[this.data.selectTopTabIndex][3].price;
+      this.setData({
+        ['setMeal[' + NewIndex + '][3].isSelect']: true,
+        needPrice: getNeedPrice,
+      })
     }
   },
 
@@ -195,7 +202,8 @@ Page({
           showNumberInfo: true,
           showClear: false,
           numberOperator: "移动",
-          canPay: true
+          canPay: true,
+          phone_number: telphone
         })
       } else if (isChinaUnion.test(telphone)) {
         this.setData({
@@ -203,7 +211,8 @@ Page({
           showNumberInfo: true,
           showClear: false,
           numberOperator: "联通",
-          canPay: true
+          canPay: true,
+          phone_number: telphone
         })
         // alert("联通");
       } else if (isChinaTelcom.test(telphone)) {
@@ -212,7 +221,8 @@ Page({
           showNumberInfo: true,
           showClear: false,
           numberOperator: "电信",
-          canPay: true
+          canPay: true,
+          phone_number: telphone
         })
         // alert("电信");
       } else {
@@ -247,22 +257,24 @@ Page({
   },
 
   setSelectMeal: function (e) {
-    this.clearSelect();
-    console.log(e);
-    // 取到选中的套餐
-    let mSelectTopTabIndex = this.data.selectTopTabIndex;
-    let mSelectMeal = e.currentTarget.dataset.selectMeal;
-    // 取到套餐中的金额
-    let mSetMeal = this.data.setMeal;
-    let mPrice = mSetMeal[mSelectTopTabIndex][mSelectMeal].price + 0;
-    //算出需要的金额
-    let mNeedMoney = mPrice - this.data.preferential_Quota;
-    mNeedMoney = mNeedMoney.toFixed(2);
-    this.setData({
-      ['setMeal[' + mSelectTopTabIndex + '][' + mSelectMeal + '].isSelect']: true,
-      needPrice: mPrice,
-      needMoney: mNeedMoney,
-    });
+    if (this.data.canPay) {
+      this.clearSelect();
+      console.log(e);
+      // 取到选中的套餐
+      let mSelectTopTabIndex = this.data.selectTopTabIndex;
+      let mSelectMeal = e.currentTarget.dataset.selectMeal;
+      // 取到套餐中的金额
+      let mSetMeal = this.data.setMeal;
+      let mPrice = mSetMeal[mSelectTopTabIndex][mSelectMeal].price + 0;
+      //算出需要的金额
+      let mNeedMoney = mPrice - this.data.preferential_Quota;
+      mNeedMoney = mNeedMoney.toFixed(2);
+      this.setData({
+        ['setMeal[' + mSelectTopTabIndex + '][' + mSelectMeal + '].isSelect']: true,
+        needPrice: mPrice,
+        needMoney: mNeedMoney,
+      });
+    }
   },
 
   setintegralNumber: function (e) {
@@ -270,11 +282,11 @@ Page({
     // let mSelectTopTabIndex = this.data.selectTopTabIndex
     let setIntegralNumber = this.data.select_integral_number[mNumberIndex];
     let setPreferentialQuota = setIntegralNumber * 0.01;
+    setPreferentialQuota = setPreferentialQuota.toFixed(2);
 
     let mNeedPrice = this.data.needPrice;
-
     console.log(this.data.needMoney);
-    if (mNeedPrice > 0) {
+    if (parseInt(mNeedPrice) > 0 && !isNaN(parseInt(mNeedPrice))) {
       let mNeedMoney = mNeedPrice - setPreferentialQuota;
       mNeedMoney = mNeedMoney.toFixed(2);
       this.setData({
@@ -295,12 +307,13 @@ Page({
     } else if (isNaN(parseInt(mUseNumer))) {
       mUseNumer = 0;
     }
-
-    console.log(mUseNumer);
     let mPreferential_Quota = mUseNumer * 0.01;
-    let mNeedMoney = this.data.needPrice - mPreferential_Quota;
-    mNeedMoney = mNeedMoney.toFixed(2);
-
+    mPreferential_Quota = mPreferential_Quota.toFixed(2);
+    let mNeedMoney = 0;
+    if (parseInt(this.data.needPrice) > 0 && !isNaN(parseInt(mUseNumer))) {
+      mNeedMoney = this.data.needPrice - mPreferential_Quota;
+      mNeedMoney = mNeedMoney.toFixed(2);
+    }
     this.setData({
       integral_number: mUseNumer,
       preferential_Quota: mPreferential_Quota,
@@ -308,11 +321,28 @@ Page({
     })
   },
 
+  toNextPage: function () {
+    /* 当前日期，充值号码,套餐*/
+    let number = this.data.phone_number;
+    let mNeedMoney = this.data.needMoney;
+    wx.reLaunch({
+      url: '/pages/order_details/order_details?number=' + number + "&needMoney=" + mNeedMoney,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.clearSelect();
+    //设置初始推荐的套餐
+    let getNeedPrice = this.data.setMeal[this.data.selectTopTabIndex][3].price;
+    this.setData({
+      ['setMeal[' + this.data.selectTopTabIndex + '][3].isSelect']: true,
+      needPrice: getNeedPrice,
+      needMoney: getNeedPrice
+    })
+    console.log(getNeedPrice);
   },
 
   /**

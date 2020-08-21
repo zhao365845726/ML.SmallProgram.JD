@@ -1,32 +1,17 @@
-// pages/order_details/order_details.js
+// pages/new/shoping/shoping.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    PhonrNumber:"",
-  },
 
-  openClipboard:function(e){
-    // console.log(e.currentTarget.dataset.toClipboard);
-    wx.setClipboardData({
-      data:e.currentTarget.dataset.toClipboard,
-      success(res){
-        wx.getClipboardData({
-          success(res){
-            console.log(res.data);
-          }
-        })
-      }
-    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // let phone = JSON.parse(options.query);
     console.log(options);
   },
 
