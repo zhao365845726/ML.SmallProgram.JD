@@ -42,7 +42,7 @@
         "selectedIconPath": "/assect/img/recommend_select.png"
       },
       {
-        "pagePath": "pages/shopping/shopping",
+        "pagePath": "pages/new/shoping/shoping",
         "text": "购物车",
         "iconPath": "/assect/img/shop.png",
         "selectedIconPath": "/assect/img/shop_select.png"

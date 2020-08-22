@@ -180,6 +180,10 @@ page{
     background-color: #F2f2f2f2;
 }
 
+.shop{
+  margin-bottom: 150rpx;
+}
+
 .top_view {
   height: 100rpx;
   background-color: white;
@@ -243,7 +247,7 @@ page{
 }
 
 .cut_bt,
-add_bt{
+.add_bt{
  width: 50rpx;
  height: 40rpx;
 }
@@ -269,3 +273,22 @@ add_bt{
   line-height: 80rpx;
 }
 
+.collection_bt{
+  width: 160rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60rpx;
+  border: #3f3f3f solid 3rpx;
+}
+
+.del_bt{
+  width: 120rpx;
+  height: 60rpx;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  border:#3f3f3f solid 3rpx;
+}

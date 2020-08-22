@@ -10,7 +10,7 @@ Page({
 
   toShopCar:function(){
     wx.switchTab({
-      url:'/pages/shopping/shopping'
+      url:'/pages/new/shoping/shoping'
     })
 
     console.log("进入购物车页面");

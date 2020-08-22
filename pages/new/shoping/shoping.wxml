@@ -1,77 +1,91 @@
 <!-- pages/new/shoping/shoping.wxml -->
-<view>
-    <view class="top_view fl_r boxsize_b padding_lr20">
-        <view class="top_left fl_r">
-            <image class="position_icon padding_lr20" mode="widthFix" src="/assect/img/new_img/weizhi.png" />
-            <view>晋城市高平市</view>
-        </view>
-        <view class="top_right fl_r">
-            <view class="right_txt">编辑</view>
-            <image class="more_icon padding_lr20" mode="widthFix" src="/assect/img/new_img/more_icon.png" />
-        </view>
-    </view>
-    <block wx:for="{{2}}">
-        <view class="shop_list border_r margin_tb20 padding_a20">
-            <checkbox-group bindchange="">
-                <view class="shop_list_box fl_c">
-                    <view class="box_top fl_r">
-                        <view class="fl_r">
-                            <label class="font_w font25" for="checkbox">
-                                <checkbox />
-                                JD 京东物流
-                            </label>
-                        </view>
-                        <view class="fl_r">
-                            <image class="info_icon" mode="widthFix" src="/assect/img/warning.png" />
-                            <view class="color_h font20">已免运费</view>
-                        </view>
-                    </view>
-                    <!-- <view class="huan_gou fl_r margin_tb20">
+<view class="shop">
+	<view class="top_view fl_r boxsize_b padding_lr20">
+		<view class="top_left fl_r" style="{{isEdit?'Visibility:hidden':'Visibility:visible'}}">
+			<image class="position_icon padding_lr20" mode="widthFix" src="/assect/img/new_img/weizhi.png" />
+			<view>晋城市高平市</view>
+		</view>
+		<view class="top_right fl_r">
+			<view class="right_txt" bind:tap="edit_shop_list">{{isEdit?'完成':'编辑'}}</view>
+			<image style="{{isEdit?'Visibility:hidden':'Visibility:visible'}}" class="more_icon padding_lr20" mode="widthFix" src="/assect/img/new_img/more_icon.png" />
+		</view>
+	</view>
+	<block wx:for="{{shopList}}" wx:for-index="id" wx:for-item="it">
+		<view wx:if="{{!it.is_del}}" class="shop_list border_r margin_tb20 padding_a20">
+			<view class="shop_list_box fl_c">
+				<view class="box_top fl_r">
+					<view class="fl_r">
+						<checkbox-group bindchange="onShopCheck" data-select-check-id="{{id}}">
+							<label class="font_w font25" for="checkbox">
+								<checkbox value="{{id}}" checked="{{it.is_select}}" />
+								JD {{it.shop_name}}
+							</label>
+						</checkbox-group>
+					</view>
+					<view class="fl_r">
+						<image class="info_icon" mode="widthFix" src="/assect/img/warning.png" />
+						<view class="color_h font20">已免运费</view>
+					</view>
+				</view>
+				<!-- <view class="huan_gou fl_r margin_tb20">
                         <view class="fl_r">
                             <view class="color_wit border_red bg_r font20">换购</view>
                             <view class="font_w font25">已满1件,可用低价换购商品</view>
                         </view>
                         <view class="color_h font25">换购商品 ></view>
                     </view> -->
-                    <block wx:for="{{4}}">
-                        <view class="shop_info_box margin_tb20 fl_r">
-                            <checkbox />
-                            <image class="shop_img" mode="widthFix" src="/assect/img/shop1.png" />
-                            <view class="shop_info padding_a10 boxsize_b fl_c">
-                                <view class="font25 padding_tb5 color_h">商品1，名字，套餐</view>
-                                <view class="font25 padding_tb5 color_h">选服务</view>
-                                <view class="font25 padding_tb5 color_h">满1件享换购</view>
-                                <view class="color_red padding_tb5 font25">秒杀中，23小时后结束</view>
-                                <view class="bottom padding_tb5 fl_r">
-                                    <view class="font_w font30 color_red">￥399.00</view>
-                                    <view class="fl_r">
-                                        <view class="cut_bt fl_r">-</view>
-                                        <view class="number_input">
-                                            <input type="number" value="1" class="shop_number" />
-                                        </view>
-                                        <view class="add_bt fl_r">+</view>
-                                    </view>
-                                </view>
-                            </view>
-                        </view>
-                    </block>
-                </view>
-            </checkbox-group>
-        </view>
-    </block>
-    <checkbox-group>
-        <view class="bottom_view boxsize_b padding_lr20 fl_r">
-            <view class="bottom_left fl_r">
-                <checkbox />
-                <view class="color_h font25">全选</view>
-            </view>
-            <view class="bottom_right fl_r">
-                <view class="margin_lr20">
-                    <span class="color_h">总计：</span>
-                    <span class="font_w ma">￥123</span>
-                </view>
-                <view class="bottom_bt font_w color_wit bg_r font35">去结算</view>
-            </view>
-        </view>
-    </checkbox-group>
+				<block wx:for="{{it.trade_list}}" wx:for-index="index" wx:for-item="item">
+					<view wx:if="{{!item.is_del}}" class="shop_info_box margin_tb20 fl_r">
+						<checkbox-group bindchange="onTradeCheck" data-select-check-id="{{id+','+index}}">
+							<checkbox value="{{index}}" checked="{{item.is_select}}" />
+						</checkbox-group>
+						<image class="shop_img" mode="widthFix" src="/assect/img/shop1.png" />
+						<view class="shop_info padding_a10 boxsize_b fl_c">
+							<view class="font25 padding_tb5 color_h">{{item.trade_name}}</view>
+							<view class="font25 padding_tb5 color_h">
+								{{item.trade_sever[0].trade_sever_txt}}
+							</view>
+							<view class="font25 padding_tb5 color_h">满1件享换购</view>
+							<view class="color_red padding_tb5 font25">秒杀中，23小时后结束</view>
+							<view class="bottom padding_tb5 fl_r">
+								<view class="font_w font30 color_red">
+									￥{{item.trade_sever[0].trade_server_price}}
+								</view>
+								<view class="fl_r">
+									<view class="cut_bt padding_lr10 boxsize_b margin_lr10 font_w fl_r" data-trade-id="{{id+','+index}}" bind:tap="cutNumber">
+										-
+									</view>
+									<view class="number_input">
+										<input type="number" value="{{item.trade_number}}" data-input-id="{{id+','+index}}" class="shop_number" bind:input="changeTradeNumber" />
+									</view>
+									<view class="add_bt padding_lr10 boxsize_b margin_lr10 font_w fl_r" data-trade-id="{{id+','+index}}" bind:tap="addNumber">
+										+
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+	</block>
+	<checkbox-group bindchange="onSelectAllCheck">
+		<view class="bottom_view boxsize_b padding_lr20 fl_r">
+			<view class="bottom_left fl_r">
+				<checkbox value="allSelect" checked="{{isAllSelect}}" />
+				<view class="color_h font25">全选</view>
+			</view>
+			<view wx:if="{{!isEdit}}" class="bottom_right fl_r">
+				<view class="margin_lr20">
+					<span class="color_h">总计：</span>
+					<span class="font_w ma">￥{{needMoney}}</span>
+				</view>
+				<view bind:tap="goNextPage" class="bottom_bt font_w color_wit bg_r font35">去结算</view>
+			</view>
+			<view wx:if="{{isEdit}}" class="bottom_right fl_r">
+				<view class="collection_bt color_h">移至收藏</view>
+				<view class="del_bt margin_lr10 color_red" bind:tap="delTrade">删除</view>
+			</view>
+		</view>
+	</checkbox-group>
 </view>
